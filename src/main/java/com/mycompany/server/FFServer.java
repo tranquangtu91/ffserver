@@ -12,10 +12,9 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -66,7 +65,7 @@ public class FFServer {
             return reg_str_lst.indexOf(reg_str);
         }
         
-        //-1: not exist; 0: avaiable; 1: in use
+        //-1: not exist; 0: available; 1: in use
         public int isAvaiable(String reg_str) {
             int id = reg_str_lst.indexOf(reg_str);
             if (id != -1) {
@@ -91,7 +90,9 @@ public class FFServer {
         device_lst_wait_reg = new ArrayList<FFDevice>(50);
     }
     
+    SocketChannel soc;
     public void Start() throws InterruptedException {
+    	
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
         ServerBootstrap bootstrap = new ServerBootstrap();
@@ -100,6 +101,7 @@ public class FFServer {
         bootstrap.childHandler(new ChannelInitializer<SocketChannel>(){
             @Override
             protected void initChannel(SocketChannel ch) throws Exception {
+            	soc = ch;
                 final FFDevice ff_device = new FFDevice(ch);
                 device_lst_wait_reg.add(ff_device);
             }
@@ -109,9 +111,10 @@ public class FFServer {
         
         Thread t_check_reg_device;
         t_check_reg_device = new Thread(() -> {
-            FFDevice ff_device;
+        	FFDevice ff_device;
             
             while (true) {
+            	
                 for (int i = 0; i < device_lst_wait_reg.size(); i ++) {
                     ff_device = (FFDevice)device_lst_wait_reg.get(i);
                     if (ff_device.isClosed()) {
@@ -142,14 +145,16 @@ public class FFServer {
                         device_lst.remove(ff_device);
                         dev_reg_info.freeRegStr(ff_device.getRegStr());
                         i--;
-                        System.err.println(String.format("remove %s from device_lst", ff_device.getRegStr()));
+                        System.out.println(String.format("remove %s from device_lst", ff_device.getRegStr()));
+                    } else {
+                    	ff_device.Send(".");
                     }
                 }
                 
                 try {
                     Thread.sleep(10);
                 } catch (InterruptedException ex) {
-                    Logger.getLogger(FFServer.class.getName()).log(Level.SEVERE, null, ex);
+                	System.err.println(ex.getMessage());
                 }
             }
         });

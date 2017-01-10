@@ -16,10 +16,10 @@ import io.netty.util.ReferenceCountUtil;
  *
  * @author TuTQ
  */
-public class ServerHandler extends ChannelInboundHandlerAdapter {
+public class DataReceiveHandler extends ChannelInboundHandlerAdapter {
     public String reg_str;
 
-    public ServerHandler() {
+    public DataReceiveHandler() {
         reg_str = "";
     }
     
@@ -30,15 +30,14 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             while (bb.isReadable()) {
                 reg_str += (char)bb.readByte();
             }
-            ReferenceCountUtil.release(msg);
         } else {
             System.out.print(String.format("%s received: ", reg_str));
             while (bb.isReadable()) {
                 System.out.print(String.format("%02X ", bb.readByte()));
             }
             System.out.println("");
-            ctx.writeAndFlush(msg);
         }
+        ReferenceCountUtil.release(msg);
     }
 
     @Override
