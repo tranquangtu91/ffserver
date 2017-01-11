@@ -90,20 +90,17 @@ public class FFServer {
         device_lst_wait_reg = new ArrayList<FFDevice>(50);
     }
     
-    SocketChannel soc;
     public void Start() throws InterruptedException {
     	
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
         ServerBootstrap bootstrap = new ServerBootstrap();
         bootstrap.group(bossGroup, workerGroup);
-        bootstrap.channel(NioServerSocketChannel.class);        
+        bootstrap.channel(NioServerSocketChannel.class);  
         bootstrap.childHandler(new ChannelInitializer<SocketChannel>(){
             @Override
             protected void initChannel(SocketChannel ch) throws Exception {
-            	soc = ch;
-                final FFDevice ff_device = new FFDevice(ch);
-                device_lst_wait_reg.add(ff_device);
+                device_lst_wait_reg.add(new FFDevice(ch));
             }
         });
         bootstrap.childOption(ChannelOption.SO_KEEPALIVE, true);
@@ -152,7 +149,7 @@ public class FFServer {
                 }
                 
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(100);
                 } catch (InterruptedException ex) {
                 	System.err.println(ex.getMessage());
                 }
