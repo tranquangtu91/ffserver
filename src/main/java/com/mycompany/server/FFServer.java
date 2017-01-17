@@ -22,20 +22,27 @@ import java.util.List;
  */
 public class FFServer {
     public int port;
+    public static int max_req_queue_size = 2;
     
-    class DevRegInfo {
+    class DevInfo {
+    	int size = 50;
+    	
         List<String> reg_str_lst;
-        List<Integer> in_use_state_lst;
+        List<Boolean> in_use_flags;
+        List<Long> last_time_connect;
 
-        public DevRegInfo() {
-            this.in_use_state_lst = new ArrayList<Integer>(50);
-            this.reg_str_lst = new ArrayList<String>(50);
+        public DevInfo(int size) {
+        	this.size = size;
+            this.in_use_flags = new ArrayList<Boolean>(size);
+            this.reg_str_lst = new ArrayList<String>(size);
+            this.last_time_connect = new ArrayList<Long>(size);
         }
         
         public void addRegStr(String reg_str) {
             if (!reg_str_lst.contains(reg_str)) {
                 reg_str_lst.add(reg_str);
-                in_use_state_lst.add(-1);
+                in_use_flags.add(false);
+                last_time_connect.add((long) 0);
             }
         }
         
@@ -43,21 +50,15 @@ public class FFServer {
             int id = reg_str_lst.indexOf(reg_str);
             if (id != -1) {
                 reg_str_lst.remove(id);
-                in_use_state_lst.remove(id);
+                in_use_flags.remove(id);
             }
         }
         
-        public void freeRegStr(String reg_str) {
+        public void lockRegStr(String reg_str) {
             int id = reg_str_lst.indexOf(reg_str);
             if (id != -1) {
-                in_use_state_lst.set(id, -1);
-            }
-        }
-        
-        public void lockRegStr(String reg_str, int index) {
-            int id = reg_str_lst.indexOf(reg_str);
-            if (id != -1) {
-                in_use_state_lst.set(id, index);
+                in_use_flags.set(id, true);
+                last_time_connect.set(id, System.currentTimeMillis());
             }
         }
         
@@ -66,28 +67,45 @@ public class FFServer {
         }
         
         //-1: not exist; 0: available; 1: in use
-        public int isAvaiable(String reg_str) {
+        public Boolean isAvailable(String reg_str) {
             int id = reg_str_lst.indexOf(reg_str);
             if (id != -1) {
-                return (int)in_use_state_lst.get(id) == -1 ? 0:1;
+                return !in_use_flags.get(id);
             }
-            return -1;
+            return false;
+        }
+        
+        public void freeAllRegStr() {
+        	int flag_count = in_use_flags.size();
+        	for (int i = 0; i < flag_count; i ++) {
+        		in_use_flags.set(i, false);
+        	}
+        }
+        
+        public Boolean isOnline(String reg_str) {
+        	int id = reg_str_lst.indexOf(reg_str);
+        	if (id != -1) {
+        		return (last_time_connect.get(id) + 10000) > System.currentTimeMillis() ? true : false;
+        	}
+        	return false;
         }
     }
     
-    public DevRegInfo dev_reg_info;
+    public DevInfo dev_info;
     public List<FFDevice> device_lst;
-    public List<FFDevice> device_lst_wait_reg;
+    
+    List<FFRequest> req_lst;
 
     public FFServer() {
         this.port = 9100;
         
-        dev_reg_info = new DevRegInfo();
-        dev_reg_info.addRegStr("device01");
-        dev_reg_info.addRegStr("device02");
+        dev_info = new DevInfo(50);
+        dev_info.addRegStr("device01");
+        dev_info.addRegStr("device02");
         
         device_lst = new ArrayList<FFDevice>(50);
-        device_lst_wait_reg = new ArrayList<FFDevice>(50);
+        
+        req_lst = new ArrayList<FFRequest>(max_req_queue_size);
     }
     
     public void Start() throws InterruptedException {
@@ -96,11 +114,11 @@ public class FFServer {
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
         ServerBootstrap bootstrap = new ServerBootstrap();
         bootstrap.group(bossGroup, workerGroup);
-        bootstrap.channel(NioServerSocketChannel.class);  
+        bootstrap.channel(NioServerSocketChannel.class);
         bootstrap.childHandler(new ChannelInitializer<SocketChannel>(){
             @Override
             protected void initChannel(SocketChannel ch) throws Exception {
-                device_lst_wait_reg.add(new FFDevice(ch));
+                device_lst.add(new FFDevice(ch));
             }
         });
         bootstrap.childOption(ChannelOption.SO_KEEPALIVE, true);
@@ -109,47 +127,57 @@ public class FFServer {
         Thread t_check_reg_device;
         t_check_reg_device = new Thread(() -> {
         	FFDevice ff_device;
+        	FFRequest ff_request;
+        	int dev_count = 0;
+        	int req_count = 0;
             
             while (true) {
             	
-                for (int i = 0; i < device_lst_wait_reg.size(); i ++) {
-                    ff_device = (FFDevice)device_lst_wait_reg.get(i);
-                    if (ff_device.isClosed()) {
-                        device_lst_wait_reg.remove(ff_device);
-                        i--;
-                        System.out.println("remove unknown conn from device_lst_wait_reg");
-                    } else if (ff_device.connect_time + 5000 < System.currentTimeMillis() && ff_device.getRegStr().isEmpty()) {
-                        ff_device.Close();
-                    }
-                    
-                    if (!ff_device.getRegStr().isEmpty()) {
-                        int result = dev_reg_info.isAvaiable(ff_device.getRegStr());
-                        if (result == 0) {
-                            device_lst_wait_reg.remove(ff_device);
-                            device_lst.add(ff_device);
-                            dev_reg_info.lockRegStr(ff_device.getRegStr(), device_lst.size()-1);
-                            System.out.println(String.format("remove %s from device_lst_wait_reg and add to device_lst", ff_device.getRegStr()));
-                        } else if (result == 1) {
-                            result = dev_reg_info.getIndexRegStr(ff_device.getRegStr());
-                            ((FFDevice)device_lst.get(result)).Close();
-                        }
-                    }
-                }
-                
-                for (int i = 0; i < device_lst.size(); i ++) {
-                    ff_device = (FFDevice)device_lst.get(i);
-                    if (ff_device.isClosed()) {
-                        device_lst.remove(ff_device);
-                        dev_reg_info.freeRegStr(ff_device.getRegStr());
-                        i--;
-                        System.out.println(String.format("remove %s from device_lst", ff_device.getRegStr()));
-                    } else {
-                    	ff_device.Send(".");
-                    }
-                }
+            	dev_count = device_lst.size();
+            	
+            	for (int i = dev_count - 1; i >= 0; i --)
+            	{
+            		ff_device = (FFDevice)device_lst.get(i);
+            		
+            		if (ff_device.isClosed()) {
+            			device_lst.remove(i);
+            			System.out.println(String.format("remove device with reg_str '%s' from device_lst", ff_device.getRegStr()));
+            			continue;
+            		}
+            		
+            		if (ff_device.getRegStr().isEmpty()) {
+            			if (ff_device.connect_time + 5000 < System.currentTimeMillis()) {
+            				ff_device.Close();
+            				System.out.println("close connection of un-reg device");
+            			}
+        				continue;
+            		}
+            		
+            		if (!dev_info.isAvailable(ff_device.getRegStr())) {
+            			ff_device.Close();
+            			System.out.println(String.format("close old connection of device that have reg_str '%s'", ff_device.getRegStr()));
+            			continue;
+            		}
+            		
+        			dev_info.lockRegStr(ff_device.getRegStr());
+        			
+        			req_count = req_lst.size();
+        			for (int j = 0; j < req_count; j ++) {
+        				ff_request = req_lst.get(j);
+        				if (ff_request.reg_str.equals(ff_device.getRegStr()) && ff_device.req == null) {
+        					ff_device.req = ff_request;
+        					req_lst.remove(j);
+        					break;
+        				}
+        			}
+        			
+        			ff_device.Process();
+            	}
+            	
+            	dev_info.freeAllRegStr();
                 
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(10);
                 } catch (InterruptedException ex) {
                 	System.err.println(ex.getMessage());
                 }
@@ -158,5 +186,20 @@ public class FFServer {
         t_check_reg_device.start();  
         
         System.out.println("com.mycompany.server.FFServer.Start()");
+    }
+
+    public void addRegToQueue(FFRequest req) {
+    	if (dev_info.isOnline(req.reg_str)) {
+    		if (req_lst.size() >= max_req_queue_size) {
+    			req.response.writeBytes("req_queue is limited".getBytes());
+    			req.have_response = true;
+    		} else {
+	    		req_lst.add(req);
+	    		System.out.println(String.format("req_lst count: %d", req_lst.size()));
+    		}
+    	} else {
+    		req.response.writeBytes("device is offline".getBytes());
+    		req.have_response = true;
+    	}
     }
 }

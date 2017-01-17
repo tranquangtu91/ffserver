@@ -5,6 +5,8 @@
  */
 package com.mycompany.device;
 
+import com.mycompany.server.FFRequest;
+
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
@@ -23,23 +25,29 @@ import io.netty.util.ReferenceCountUtil;
  * @author TuTQ
  */
 public class FFDevice {
-    public SocketChannel soc;
+    SocketChannel soc;
     public long connect_time;
-    public String reg_str;
     
+    int idle_time_interval_s = 30;
+    String reg_str;
     boolean is_closed = false;
+    
+    ByteBuf data_rcv;
+    public FFRequest req;
 
     public FFDevice(SocketChannel ch) {
+    	this.req = null;
         this.soc = ch;
+        data_rcv = soc.alloc().buffer(512);
         this.reg_str = "";
         connect_time = System.currentTimeMillis();
         ChannelPipeline pipeline = ch.pipeline();
-        pipeline.addLast(new IdleStateHandler(0, 0, 5));
-        pipeline.addLast(new MessageToByteEncoder<Object>() {
+        pipeline.addLast(new IdleStateHandler(0, 0, idle_time_interval_s));
+        pipeline.addLast(new MessageToByteEncoder<byte[]>() {
         	@Override
-        	protected void encode(ChannelHandlerContext ctx, Object msg, ByteBuf out) throws Exception {
+        	protected void encode(ChannelHandlerContext ctx, byte[] msg, ByteBuf out) throws Exception {
         		// TODO Auto-generated method stub
-        		out.writeBytes(msg.toString().getBytes());
+        		out.writeBytes(msg);
         	}
 		});
         pipeline.addLast(new ChannelInboundHandlerAdapter() {
@@ -52,11 +60,8 @@ public class FFDevice {
                         reg_str += (char)bb.readByte();
                     }
                 } else {
-                    System.out.print(String.format("%s received: ", reg_str));
-                    while (bb.isReadable()) {
-                        System.out.print(String.format("%02X ", bb.readByte()));
-                    }
-                    System.out.println("");
+                	data_rcv.writeBytes(bb);
+//                    System.out.println(String.format("%s data_rcv size: %d", reg_str, data_rcv.readableBytes()));
                 }
                 ReferenceCountUtil.release(msg);
         	}
@@ -72,7 +77,7 @@ public class FFDevice {
                 if (evt instanceof IdleStateEvent) {
                     IdleStateEvent event = (IdleStateEvent)evt;
                     if (event.state() == IdleState.ALL_IDLE) {
-                        System.out.println(String.format("%s - idle state", reg_str));
+                        System.out.println(String.format("%s in idle state", reg_str));
                     }
                 }
             }
@@ -104,5 +109,33 @@ public class FFDevice {
     public void Send(Object data) {
     	if (is_closed) return;
     	soc.writeAndFlush(data);
+    }
+    
+    public void clearDataRcv() {
+    	data_rcv.clear();
+    }
+    
+    public void Process() {
+    	if (req == null) return;
+    	
+    	if (!req.is_waiting) {
+	    	req.is_waiting = true;
+	    	Send(req.request.array());
+	    	data_rcv.clear();
+    	} else {
+    		if (req.request_create_time + req.request_time_out_ms < System.currentTimeMillis()) {
+    			req.have_response = true;
+    	    	req.response.writeBytes("Timeout".getBytes());
+    	    	req = null;
+    	    	return;
+    		}
+    		
+    		if (data_rcv.readableBytes() > 3) {
+    	    	req.have_response = true;
+    	    	req.response = data_rcv;
+    	    	req = null;
+    	    	return;
+    		}
+    	}
     }
 }
