@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.ffserver;
+package com.mycompany.main;
 
 import java.io.IOException;
 
+import com.mycompany.ffserver.FFServer;
 import com.mycompany.httpserver.FFHttpServer;
-import com.mycompany.server.FFServer;
 
 /**
  *

@@ -5,7 +5,7 @@
  */
 package com.mycompany.device;
 
-import com.mycompany.server.FFRequest;
+import com.mycompany.ffserver.FFRequest;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFuture;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.server;
+package com.mycompany.ffserver;
 
 import com.mycompany.device.FFDevice;
 import io.netty.bootstrap.ServerBootstrap;

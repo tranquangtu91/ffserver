@@ -5,9 +5,9 @@ import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.mycompany.ffserver.MainApplication;
+import com.mycompany.ffserver.FFRequest;
+import com.mycompany.main.MainApplication;
 import com.mycompany.modbus.ModbusRTU;
-import com.mycompany.server.FFRequest;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 

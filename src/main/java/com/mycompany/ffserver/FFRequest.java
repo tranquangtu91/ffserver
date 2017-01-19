@@ -1,4 +1,4 @@
-package com.mycompany.server;
+package com.mycompany.ffserver;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

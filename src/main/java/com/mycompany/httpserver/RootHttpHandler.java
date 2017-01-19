@@ -3,8 +3,8 @@ package com.mycompany.httpserver;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import com.mycompany.ffserver.MainApplication;
-import com.mycompany.server.FFRequest;
+import com.mycompany.ffserver.FFRequest;
+import com.mycompany.main.MainApplication;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
