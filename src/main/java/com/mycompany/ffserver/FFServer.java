@@ -35,6 +35,10 @@ public class FFServer {
         dev_info = new FFDevInfo(50);
         dev_info.addRegStr("device01");
         dev_info.addRegStr("device02");
+        dev_info.addRegStr("device03");
+        dev_info.addRegStr("device04");
+        dev_info.addRegStr("device05");
+        dev_info.addRegStr("device06");
         
         device_lst = new ArrayList<FFDevice>(50);
         
@@ -45,6 +49,7 @@ public class FFServer {
     	
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
+        
         ServerBootstrap bootstrap = new ServerBootstrap();
         bootstrap.group(bossGroup, workerGroup);
         bootstrap.channel(NioServerSocketChannel.class);
@@ -58,7 +63,7 @@ public class FFServer {
         bootstrap.bind(port).sync();
         
         Thread t_check_reg_device = new Thread(new DevManTask());
-        t_check_reg_device.start();  
+        t_check_reg_device.start(); 
         
         System.out.println("ff_server start");
     }
@@ -124,6 +129,7 @@ public class FFServer {
         			for (int j = 0; j < req_count; j ++) {
         				ff_request = req_lst.get(j);
         				if (ff_request.reg_str.equals(ff_device.getRegStr()) && ff_device.req == null) {
+        					System.out.println(String.format("send req to %s", ff_device.getRegStr()));
         					ff_device.req = ff_request;
         					req_lst.remove(j);
         					break;

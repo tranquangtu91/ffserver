@@ -20,10 +20,10 @@ public class MainApplication {
 	
     public static void main(String[] args) throws InterruptedException, IOException {
         ff_server = new FFServer();
-        ff_server.port = 8888;
+        ff_server.port = Integer.parseInt(args[0]);
         ff_server.Start();
         
-        ff_http_server = new FFHttpServer(8000);
+        ff_http_server = new FFHttpServer(Integer.parseInt(args[1]));
         ff_http_server.Start();
     }
 }

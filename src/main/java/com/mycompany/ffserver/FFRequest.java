@@ -7,7 +7,7 @@ public class FFRequest {
 	public String reg_str;
 	public EnumRequestType request_type;
 	
-	public enum EnumRequestType {Modbus_0x05};
+	public enum EnumRequestType {Modbus_0x02, Modbus_0x04, Modbus_0x05};
 	
 	public int request_time_out_ms;
 	public long request_create_time;

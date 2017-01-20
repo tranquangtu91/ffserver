@@ -12,6 +12,7 @@ import com.sun.net.httpserver.HttpHandler;
 public class CheckOnlineHttpHandler implements HttpHandler {
 	@Override
 	public void handle(HttpExchange arg0) throws IOException {
+		System.out.println("CheckOnlineHttpHandler");
 		// parse request
 		Map<String, Object> parameters = new HashMap<String, Object>();
         String query = arg0.getRequestURI().getRawQuery();

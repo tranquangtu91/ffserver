@@ -10,30 +10,34 @@ import com.mycompany.ffserver.FFRequest;
 import com.mycompany.ffserver.FFRequest.EnumRequestType;
 import com.mycompany.main.MainApplication;
 import com.mycompany.modbus.ModbusRTU;
+import com.mycompany.utils.JSONEncoder;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
 import io.netty.buffer.Unpooled;
 
-public class DOutHttpHandler implements HttpHandler{
-	
+public class DInHttpHandler implements HttpHandler{
 	@Override
 	public void handle(HttpExchange arg0) throws IOException {
-		System.out.println("DOutHttpHandler");
+		// TODO Auto-generated method stub
+		System.out.println("DInHttpHandler");
+		
 		// parse request
 		Map<String, Object> parameters = new HashMap<String, Object>();
 	    String query = arg0.getRequestURI().getRawQuery();
 		Utils.parseQuery(query, parameters);
 	    
 	    String response = "";
+	    String msg = "";
+	    Boolean result = false;
+	    byte di_state = 0x00;
+	    
 	    Object reg_str = parameters.get("reg_str");
-	    Object dout = parameters.get("dout");
-	    Object state = parameters.get("state");
-		if (reg_str != null && dout != null && state != null) {
+		if (reg_str != null) {
 			
 			FFRequest req = new FFRequest((String) reg_str, 
-					EnumRequestType.Modbus_0x05, 
-					Unpooled.copiedBuffer(ModbusRTU.GenMsg_SetDo((byte) 0x01, Integer.parseInt((String) dout), Boolean.parseBoolean((String)state))), 
+					EnumRequestType.Modbus_0x02, 
+					Unpooled.copiedBuffer(ModbusRTU.genMsgGetDIn((byte) 0x01, 0x00, 0x08)), 
 					5000);
 			MainApplication.ff_server.addRegToQueue(req);
 			
@@ -49,20 +53,23 @@ public class DOutHttpHandler implements HttpHandler{
 			
 			if (req.have_response) {
 				if (!req.result) {
-					response = req.response.toString(Charset.defaultCharset());
+					msg = req.response.toString(Charset.defaultCharset());
 				}
-				else if (req.response.equals(req.request)) {
-					response = "Success";
+				else if (req.response.readableBytes() >= 6) {	
+					msg = "Success";
+					di_state = req.response.getByte(3);
+					result = true;
 				} else {
-					response = "Error";
+					msg = "Error";
 				}
 			} else {
-				response = "Timeout";
+				msg = "Timeout";
 			}
 		} else {
-			response = "Request Params Error";
+			msg = "Request Params Error";
 		}
 	    
+		response = JSONEncoder.genDInResponse((String) reg_str, result, di_state, msg);
 	    arg0.sendResponseHeaders(200, response.length());
 	    OutputStream os = arg0.getResponseBody();
 	    os.write(response.toString().getBytes());

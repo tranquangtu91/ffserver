@@ -2,6 +2,8 @@ package com.mycompany.httpserver;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.util.concurrent.Executors;
+
 import com.sun.net.httpserver.HttpServer;
 
 public class FFHttpServer {
@@ -13,7 +15,9 @@ public class FFHttpServer {
 		server = HttpServer.create(new InetSocketAddress(port), 0);
         server.createContext("/check_online", new CheckOnlineHttpHandler());
         server.createContext("/dout", new DOutHttpHandler());
-        server.setExecutor(null);
+        server.createContext("/din", new DInHttpHandler());
+        server.createContext("/ain", new AInHttpHandler());
+        server.setExecutor(Executors.newFixedThreadPool(20));
 	}
 	
 	public void Start() {

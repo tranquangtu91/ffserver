@@ -125,23 +125,41 @@ public class FFDevice {
     	} else {
     		if (req.request_create_time + req.request_time_out_ms < System.currentTimeMillis()) {
     			req.have_response = true;
-    	    	req.response.writeBytes("Timeout".getBytes());
+    	    	req.response.writeBytes("Device online but not response".getBytes());
     	    	req = null;
     	    	return;
     		}
     		
     		switch (req.request_type) {
-			case Modbus_0x05:
-	    		if (data_rcv.readableBytes() >= 8) {
-	    	    	req.have_response = true;
-	    	    	req.response = data_rcv;
-	    	    	req.result = true;
-	    	    	req = null;
-	    	    	return;
-	    		}
-				break;
-			default:
-				break;
+				case Modbus_0x05:
+		    		if (data_rcv.readableBytes() >= 8) {
+		    	    	req.have_response = true;
+		    	    	req.response = data_rcv;
+		    	    	req.result = true;
+		    	    	req = null;
+		    	    	return;
+		    		}
+					break;
+				case Modbus_0x04:
+					if (data_rcv.readableBytes() >= 37) {
+						req.have_response = true;
+		    	    	req.response = data_rcv;
+		    	    	req.result = true;
+		    	    	req = null;
+		    	    	return;
+					}
+					break;
+				case Modbus_0x02:
+					if (data_rcv.readableBytes() >= 6) {
+						req.have_response = true;
+		    	    	req.response = data_rcv;
+		    	    	req.result = true;
+		    	    	req = null;
+		    	    	return;
+					}
+					break;
+				default:
+					break;
 			}
     	}
     }

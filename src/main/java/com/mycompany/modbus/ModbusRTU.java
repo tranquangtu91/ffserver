@@ -17,6 +17,37 @@ public class ModbusRTU {
 		return ba;
 	}
 	
+	public static byte[] genMsgGetDIn(byte dev_id, int address, int num) {
+		byte[] ba = new byte[8];		
+		ba[0] = dev_id;
+		ba[1] = 0x02;
+		ba[2] = (byte) ((address >> 8) & 0xFF);
+		ba[3] = (byte) (address & 0xFF);
+		ba[4] = (byte) ((num >> 8) & 0xFF);
+		ba[5] = (byte) (num & 0xFF);
+		int crc = ModRTU_CRC(ba, 6);
+		ba[6] = (byte) (crc & 0xFF);
+		ba[7] = (byte) (crc >> 8 & 0xFF);
+		
+		return ba;
+	}
+	
+	public static byte[] GenMsg_GetAI(byte dev_id, int address, int num) {
+		byte[] ba = new byte[8];		
+		ba[0] = dev_id;
+		ba[1] = 0x04;
+		ba[2] = (byte) ((address >> 8) & 0xFF);
+		ba[3] = (byte) (address & 0xFF);
+		num = num*2;
+		ba[4] = (byte) ((num >> 8) & 0xFF);
+		ba[5] = (byte) (num & 0xFF);
+		int crc = ModRTU_CRC(ba, 6);
+		ba[6] = (byte) (crc & 0xFF);
+		ba[7] = (byte) (crc >> 8 & 0xFF);
+		
+		return ba;
+	}
+	
 	// Compute the MODBUS RTU CRC
 	public static int ModRTU_CRC(byte[] buf, int len)
 	{
