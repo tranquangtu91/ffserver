@@ -8,6 +8,7 @@ package com.mycompany.device;
 import java.nio.charset.Charset;
 
 import com.mycompany.ffserver.FFRequest;
+import com.mycompany.ffserver.FFServer;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFuture;
@@ -60,8 +61,9 @@ public class FFDevice {
                 if (reg_str.equals("")) {
                     reg_str = bb.toString(Charset.defaultCharset());
                 } else {
+                	FFServer.logger.debug(String.format("%s receive: %d bytes", reg_str, bb.readableBytes()));
                 	data_rcv.writeBytes(bb);
-//                    System.out.println(String.format("%s data_rcv size: %d", reg_str, data_rcv.readableBytes()));
+//                    FFServer.logger.debug(String.format("%s data_rcv size: %d", reg_str, data_rcv.readableBytes()));
                 }
                 ReferenceCountUtil.release(msg);
         	}
@@ -77,7 +79,7 @@ public class FFDevice {
                 if (evt instanceof IdleStateEvent) {
                     IdleStateEvent event = (IdleStateEvent)evt;
                     if (event.state() == IdleState.ALL_IDLE) {
-                        System.out.println(String.format("%s in idle state", reg_str));
+                    	FFServer.logger.debug(String.format("%s in idle state", reg_str));
                     }
                 }
             }
@@ -88,7 +90,7 @@ public class FFDevice {
             @Override
             public void operationComplete(ChannelFuture future) throws Exception {
                 is_closed = true;
-                System.out.println(String.format("%s disconnected", reg_str));
+                FFServer.logger.debug(String.format("%s disconnected", reg_str));
             }
         });
     }
@@ -102,7 +104,7 @@ public class FFDevice {
     }
     
     public void Close() {
-        System.out.println("com.mycompany.device.FFDevice.close()");
+        FFServer.logger.debug("com.mycompany.device.FFDevice.close()");
         soc.close();
     }
     

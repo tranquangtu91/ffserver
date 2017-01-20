@@ -10,6 +10,7 @@ import com.mycompany.ffserver.FFRequest;
 import com.mycompany.ffserver.FFRequest.EnumRequestType;
 import com.mycompany.main.MainApplication;
 import com.mycompany.modbus.ModbusRTU;
+import com.mycompany.utils.JSONEncoder;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
@@ -19,13 +20,16 @@ public class DOutHttpHandler implements HttpHandler{
 	
 	@Override
 	public void handle(HttpExchange arg0) throws IOException {
-		System.out.println("DOutHttpHandler");
+		FFHttpServer.logger.debug(String.format("DOutHttpHandler: %s", arg0.getRequestURI().toString()));
 		// parse request
 		Map<String, Object> parameters = new HashMap<String, Object>();
 	    String query = arg0.getRequestURI().getRawQuery();
 		Utils.parseQuery(query, parameters);
 	    
 	    String response = "";
+	    String msg = "";
+	    Boolean result = false;
+	    
 	    Object reg_str = parameters.get("reg_str");
 	    Object dout = parameters.get("dout");
 	    Object state = parameters.get("state");
@@ -49,20 +53,24 @@ public class DOutHttpHandler implements HttpHandler{
 			
 			if (req.have_response) {
 				if (!req.result) {
-					response = req.response.toString(Charset.defaultCharset());
+					msg = req.response.toString(Charset.defaultCharset());
 				}
 				else if (req.response.equals(req.request)) {
-					response = "Success";
+					msg = "Success";
+					result = true;
 				} else {
-					response = "Error";
+					msg = "Error";
 				}
 			} else {
-				response = "Timeout";
+				msg = "Timeout";
 			}
 		} else {
-			response = "Request Params Error";
+			msg = "Request Params Error";
 		}
 	    
+		response = JSONEncoder.genDOutResponse((String) reg_str, result, msg);
+		FFHttpServer.logger.debug(String.format("DOutHttpHandler: %s", response));
+		
 	    arg0.sendResponseHeaders(200, response.length());
 	    OutputStream os = arg0.getResponseBody();
 	    os.write(response.toString().getBytes());

@@ -19,7 +19,7 @@ import io.netty.buffer.Unpooled;
 public class AInHttpHandler implements HttpHandler{
 	@Override
 	public void handle(HttpExchange arg0) throws IOException {
-		System.out.println("AInHttpHandler");
+		FFHttpServer.logger.debug(String.format("AInHttpHandler: %s", arg0.getRequestURI().toString()));
 		
 		// parse request
 		Map<String, Object> parameters = new HashMap<String, Object>();
@@ -71,7 +71,9 @@ public class AInHttpHandler implements HttpHandler{
 			msg = "Request Params Error";
 		}
 	    
-		response = JSONEncoder.genAInResponse((String) reg_str, result, ai_state, msg);
+		response = JSONEncoder.genAInResponse((String) reg_str, result, ai_state, msg);		
+		FFHttpServer.logger.debug(String.format("AInHttpHandler: %s", response));
+		
 	    arg0.sendResponseHeaders(200, response.length());
 	    OutputStream os = arg0.getResponseBody();
 	    os.write(response.toString().getBytes());

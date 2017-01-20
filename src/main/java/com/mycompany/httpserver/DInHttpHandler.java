@@ -20,7 +20,7 @@ public class DInHttpHandler implements HttpHandler{
 	@Override
 	public void handle(HttpExchange arg0) throws IOException {
 		// TODO Auto-generated method stub
-		System.out.println("DInHttpHandler");
+		FFHttpServer.logger.debug(String.format("DInHttpHandler: %s", arg0.getRequestURI().toString()));
 		
 		// parse request
 		Map<String, Object> parameters = new HashMap<String, Object>();
@@ -70,6 +70,8 @@ public class DInHttpHandler implements HttpHandler{
 		}
 	    
 		response = JSONEncoder.genDInResponse((String) reg_str, result, di_state, msg);
+		FFHttpServer.logger.debug(String.format("DInHttpHandler: %s", response));
+		
 	    arg0.sendResponseHeaders(200, response.length());
 	    OutputStream os = arg0.getResponseBody();
 	    os.write(response.toString().getBytes());

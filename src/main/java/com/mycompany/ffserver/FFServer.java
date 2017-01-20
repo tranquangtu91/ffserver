@@ -16,11 +16,16 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
 /**
  *
  * @author TuTQ
  */
 public class FFServer {
+	public static Logger logger = Logger.getLogger(FFServer.class.getName());
+	
     public int port;
     public static int max_req_queue_size = 2;
     
@@ -30,6 +35,8 @@ public class FFServer {
     List<FFRequest> req_lst;
 
     public FFServer() {
+    	PropertyConfigurator.configure("log4j.properties");
+    	
         this.port = 9100;
         
         dev_info = new FFDevInfo(50);
@@ -65,7 +72,7 @@ public class FFServer {
         Thread t_check_reg_device = new Thread(new DevManTask());
         t_check_reg_device.start(); 
         
-        System.out.println("ff_server start");
+        logger.info("ff_server module started");
     }
 
     public void addRegToQueue(FFRequest req) {
@@ -75,7 +82,7 @@ public class FFServer {
     			req.have_response = true;
     		} else {
 	    		req_lst.add(req);
-	    		System.out.println(String.format("req_lst count: %d", req_lst.size()));
+	    		logger.info(String.format("req_lst count: %d", req_lst.size()));
     		}
     	} else {
     		req.response.writeBytes("Device is offline".getBytes());
@@ -105,21 +112,21 @@ public class FFServer {
             		
             		if (ff_device.isClosed()) {
             			device_lst.remove(i);
-            			System.out.println(String.format("remove device with reg_str '%s' from device_lst", ff_device.getRegStr()));
+            			logger.info(String.format("remove device with reg_str '%s' from device_lst", ff_device.getRegStr()));
             			continue;
             		}
             		
             		if (ff_device.getRegStr().isEmpty()) {
             			if (ff_device.connect_time + 5000 < System.currentTimeMillis()) {
             				ff_device.Close();
-            				System.out.println("close connection of un-reg device");
+            				logger.info("close connection of un-reg device");
             			}
         				continue;
             		}
             		
             		if (!dev_info.isAvailable(ff_device.getRegStr())) {
             			ff_device.Close();
-            			System.out.println(String.format("close old connection of device that have reg_str '%s'", ff_device.getRegStr()));
+            			logger.info(String.format("close old connection of device that have reg_str '%s'", ff_device.getRegStr()));
             			continue;
             		}
             		
@@ -129,7 +136,7 @@ public class FFServer {
         			for (int j = 0; j < req_count; j ++) {
         				ff_request = req_lst.get(j);
         				if (ff_request.reg_str.equals(ff_device.getRegStr()) && ff_device.req == null) {
-        					System.out.println(String.format("send req to %s", ff_device.getRegStr()));
+        					logger.info(String.format("send req to %s", ff_device.getRegStr()));
         					ff_device.req = ff_request;
         					req_lst.remove(j);
         					break;

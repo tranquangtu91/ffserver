@@ -7,6 +7,29 @@ import org.json.simple.JSONObject;
 
 public class JSONEncoder {
 	@SuppressWarnings("unchecked")
+	public static String genGenericResponse(String reg_str, String msg) {
+		
+		final JSONObject obj = new JSONObject();
+
+		obj.put("reg_str", reg_str);
+		obj.put("msg", msg);
+		
+		return obj.toJSONString();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static String genDOutResponse(String reg_str, Boolean result, String msg) {
+		
+		final JSONObject obj = new JSONObject();
+
+		obj.put("reg_str", reg_str);
+		obj.put("msg", msg);
+		obj.put("result", result);
+		
+		return obj.toJSONString();
+	}
+	
+	@SuppressWarnings("unchecked")
 	public static String genDInResponse(String reg_str, Boolean result, byte di_state, String msg) {
 		
 		final JSONObject obj = new JSONObject();
