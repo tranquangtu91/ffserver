@@ -5,6 +5,8 @@
  */
 package com.mycompany.device;
 
+import java.nio.charset.Charset;
+
 import com.mycompany.ffserver.FFRequest;
 
 import io.netty.buffer.ByteBuf;
@@ -28,7 +30,7 @@ public class FFDevice {
     SocketChannel soc;
     public long connect_time;
     
-    int idle_time_interval_s = 30;
+    int idle_time_interval_s = 120;
     String reg_str;
     boolean is_closed = false;
     
@@ -56,9 +58,7 @@ public class FFDevice {
         		// TODO Auto-generated method stub
         		ByteBuf bb = (ByteBuf)msg;
                 if (reg_str.equals("")) {
-                    while (bb.isReadable()) {
-                        reg_str += (char)bb.readByte();
-                    }
+                    reg_str = bb.toString(Charset.defaultCharset());
                 } else {
                 	data_rcv.writeBytes(bb);
 //                    System.out.println(String.format("%s data_rcv size: %d", reg_str, data_rcv.readableBytes()));
@@ -130,12 +130,19 @@ public class FFDevice {
     	    	return;
     		}
     		
-    		if (data_rcv.readableBytes() > 3) {
-    	    	req.have_response = true;
-    	    	req.response = data_rcv;
-    	    	req = null;
-    	    	return;
-    		}
+    		switch (req.request_type) {
+			case Modbus_0x05:
+	    		if (data_rcv.readableBytes() >= 8) {
+	    	    	req.have_response = true;
+	    	    	req.response = data_rcv;
+	    	    	req.result = true;
+	    	    	req = null;
+	    	    	return;
+	    		}
+				break;
+			default:
+				break;
+			}
     	}
     }
 }

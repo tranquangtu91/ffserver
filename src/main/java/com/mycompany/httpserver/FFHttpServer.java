@@ -11,7 +11,6 @@ public class FFHttpServer {
 	public FFHttpServer(int port) throws IOException {
 		this.port = port;
 		server = HttpServer.create(new InetSocketAddress(port), 0);
-        server.createContext("/", new RootHttpHandler());
         server.createContext("/check_online", new CheckOnlineHttpHandler());
         server.createContext("/dout", new DOutHttpHandler());
         server.setExecutor(null);
@@ -19,5 +18,6 @@ public class FFHttpServer {
 	
 	public void Start() {
         server.start();
+        System.out.println("ff_http_server start");
 	}
 }
