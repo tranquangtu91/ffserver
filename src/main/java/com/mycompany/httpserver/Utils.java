@@ -26,6 +26,7 @@ public class Utils {
 				if (parameters.containsKey(key)) {
 					Object obj = parameters.get(key);
 					if (obj instanceof List<?>) {
+						@SuppressWarnings("unchecked")
 						List<String> values = (List<String>) obj;
 						values.add(value);
 
