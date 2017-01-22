@@ -40,12 +40,6 @@ public class FFServer {
         this.port = 9100;
         
         dev_info = new FFDevInfo(50);
-        dev_info.addRegStr("device01");
-        dev_info.addRegStr("device02");
-        dev_info.addRegStr("device03");
-        dev_info.addRegStr("device04");
-        dev_info.addRegStr("device05");
-        dev_info.addRegStr("device06");
         
         device_lst = new ArrayList<FFDevice>(50);
         
@@ -75,7 +69,11 @@ public class FFServer {
         logger.info("ff_server module started");
     }
 
-    public void addRegToQueue(FFRequest req) {
+    public void addRegDevice(String reg_str) {
+        dev_info.addRegStr(reg_str);
+    }
+    
+    public void addReqToQueue(FFRequest req) {
     	if (dev_info.isOnline(req.reg_str)) {
     		if (req_lst.size() >= max_req_queue_size) {
     			req.response.writeBytes("req_queue is limited".getBytes());

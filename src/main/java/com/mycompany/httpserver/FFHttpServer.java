@@ -24,6 +24,7 @@ public class FFHttpServer {
         server.createContext("/dout", new DOutHttpHandler());
         server.createContext("/din", new DInHttpHandler());
         server.createContext("/ain", new AInHttpHandler());
+        server.createContext("/get_device_list", new GetDeviceListHttpHandler());
         server.setExecutor(Executors.newFixedThreadPool(20));
 	}
 	

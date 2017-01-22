@@ -38,7 +38,7 @@ public class AInHttpHandler implements HttpHandler{
 					EnumRequestType.Modbus_0x04, 
 					Unpooled.copiedBuffer(ModbusRTU.GenMsg_GetAI((byte) 0x01, 0x00, 0x08)), 
 					5000);
-			MainApplication.ff_server.addRegToQueue(req);
+			MainApplication.ff_server.addReqToQueue(req);
 			
 			while (!req.have_response && 
 					(req.request_create_time + req.request_time_out_ms + 5000) > System.currentTimeMillis()) {

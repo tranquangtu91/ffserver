@@ -39,7 +39,7 @@ public class DOutHttpHandler implements HttpHandler{
 					EnumRequestType.Modbus_0x05, 
 					Unpooled.copiedBuffer(ModbusRTU.GenMsg_SetDo((byte) 0x01, Integer.parseInt((String) dout), Boolean.parseBoolean((String)state))), 
 					5000);
-			MainApplication.ff_server.addRegToQueue(req);
+			MainApplication.ff_server.addReqToQueue(req);
 			
 			while (!req.have_response && 
 					(req.request_create_time + req.request_time_out_ms + 5000) > System.currentTimeMillis()) {

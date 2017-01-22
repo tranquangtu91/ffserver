@@ -39,7 +39,7 @@ public class DInHttpHandler implements HttpHandler{
 					EnumRequestType.Modbus_0x02, 
 					Unpooled.copiedBuffer(ModbusRTU.genMsgGetDIn((byte) 0x01, 0x00, 0x08)), 
 					5000);
-			MainApplication.ff_server.addRegToQueue(req);
+			MainApplication.ff_server.addReqToQueue(req);
 			
 			while (!req.have_response && 
 					(req.request_create_time + req.request_time_out_ms + 5000) > System.currentTimeMillis()) {
