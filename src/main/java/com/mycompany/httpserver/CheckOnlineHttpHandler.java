@@ -1,7 +1,6 @@
 package com.mycompany.httpserver;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,9 +32,6 @@ public class CheckOnlineHttpHandler implements HttpHandler {
     	response = JSONEncoder.genGenericResponse((String) reg_str, msg);	
 		FFHttpServer.logger.debug(String.format("CheckOnlineHttpHandler: %s", response));
         
-        arg0.sendResponseHeaders(200, response.length());
-        OutputStream os = arg0.getResponseBody();
-        os.write(response.toString().getBytes());
-        os.close();
+		Utils.sendResponse(arg0, response);
 	}
 }

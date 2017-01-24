@@ -63,7 +63,6 @@ public class FFDevice {
                 } else {
                 	FFServer.logger.debug(String.format("%s receive: %d bytes", reg_str, bb.readableBytes()));
                 	data_rcv.writeBytes(bb);
-//                    FFServer.logger.debug(String.format("%s data_rcv size: %d", reg_str, data_rcv.readableBytes()));
                 }
                 ReferenceCountUtil.release(msg);
         	}

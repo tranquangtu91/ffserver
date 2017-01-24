@@ -1,7 +1,6 @@
 package com.mycompany.httpserver;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
@@ -71,9 +70,6 @@ public class DOutHttpHandler implements HttpHandler{
 		response = JSONEncoder.genDOutResponse((String) reg_str, result, msg);
 		FFHttpServer.logger.debug(String.format("DOutHttpHandler: %s", response));
 		
-	    arg0.sendResponseHeaders(200, response.length());
-	    OutputStream os = arg0.getResponseBody();
-	    os.write(response.toString().getBytes());
-	    os.close();
+		Utils.sendResponse(arg0, response);
 	}
 }

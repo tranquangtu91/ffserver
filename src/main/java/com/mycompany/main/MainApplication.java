@@ -6,13 +6,10 @@
 package com.mycompany.main;
 
 import java.io.IOException;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-
-import com.mycompany.database.DbUtils;
 import com.mycompany.ffserver.FFServer;
 import com.mycompany.httpserver.FFHttpServer;
 
@@ -35,13 +32,5 @@ public class MainApplication {
         
         ff_http_server = new FFHttpServer(Integer.parseInt(args[1]));
         ff_http_server.Start();
-        
-        ResultSet rs = DbUtils.getDeviceList();
-        String reg_str = "";
-        while (rs.next()) {
-        	reg_str = rs.getString("regs");
-        	logger.info(String.format("add reg_str %s to ff_server", reg_str));
-        	ff_server.addRegDevice(reg_str);
-        }
     }
 }

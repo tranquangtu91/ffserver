@@ -5,6 +5,7 @@
  */
 package com.mycompany.ffserver;
 
+import com.mycompany.database.DbUtils;
 import com.mycompany.device.FFDevice;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
@@ -13,6 +14,8 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,7 +49,7 @@ public class FFServer {
         req_lst = new ArrayList<FFRequest>(max_req_queue_size);
     }
     
-    public void Start() throws InterruptedException {
+    public void Start() throws InterruptedException, SQLException, ClassNotFoundException {
     	
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -64,7 +67,16 @@ public class FFServer {
         bootstrap.bind(port).sync();
         
         Thread t_check_reg_device = new Thread(new DevManTask());
-        t_check_reg_device.start(); 
+        t_check_reg_device.start();  
+        
+        ResultSet rs = DbUtils.getDeviceList();
+        String reg_str = "";
+        while (rs.next()) {
+        	reg_str = rs.getString("regs");
+        	logger.info(String.format("add reg_str %s to ff_server", reg_str));
+        	addRegDevice(reg_str);
+        	DbUtils.updateAllToOffline();
+        }
         
         logger.info("ff_server module started");
     }

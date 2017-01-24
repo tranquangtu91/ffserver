@@ -1,7 +1,6 @@
 package com.mycompany.httpserver;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,10 +35,7 @@ public class GetDeviceListHttpHandler implements HttpHandler{
     	
     	response = JSONEncoder.genDeviceListResponse(result, rs, msg);
 		FFHttpServer.logger.debug(String.format("GetDeviceListHttpHandler: %s", response));
-        
-        arg0.sendResponseHeaders(200, response.length());
-        OutputStream os = arg0.getResponseBody();
-        os.write(response.toString().getBytes());
-        os.close();
+
+        Utils.sendResponse(arg0, response);
 	}
 }

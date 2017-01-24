@@ -1,12 +1,24 @@
 package com.mycompany.httpserver;
 
+import java.io.IOException;
+import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import com.sun.net.httpserver.HttpExchange;
+
 public class Utils {
+	public static void sendResponse(HttpExchange arg0, String response) throws IOException {
+		arg0.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
+        arg0.sendResponseHeaders(200, response.length());
+        OutputStream os = arg0.getResponseBody();
+        os.write(response.toString().getBytes());
+        os.close();
+	}
+	
 	public static void parseQuery(String query, Map<String, Object> parameters) throws UnsupportedEncodingException {
 
 		if (query != null) {

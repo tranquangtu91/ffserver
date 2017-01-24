@@ -7,8 +7,6 @@ import java.util.List;
 
 import org.json.simple.JSONObject;
 
-import com.mycompany.main.MainApplication;
-
 public class JSONEncoder {
 	@SuppressWarnings("unchecked")
 	public static String genGenericResponse(String reg_str, String msg) {
@@ -78,15 +76,16 @@ public class JSONEncoder {
 		final JSONObject obj = new JSONObject();
 		final List<JSONObject> device_info = new ArrayList<JSONObject>();
 		
-		
 		if (result) {
 			try {
 				while (result_set.next()) {
 					JSONObject jobj = new JSONObject();
 					String rsg_str = result_set.getString("name");
 					jobj.put("name", rsg_str);
+					jobj.put("id", result_set.getInt("id"));
 					jobj.put("reg_str", result_set.getString("regs"));
-					jobj.put("online", MainApplication.ff_server.checkOnline(rsg_str));
+					jobj.put("online", result_set.getBoolean("online"));
+					jobj.put("connect_last_time", result_set.getTimestamp("connect_last_time"));
 					device_info.add(jobj);
 				}
 				obj.put("data", device_info);

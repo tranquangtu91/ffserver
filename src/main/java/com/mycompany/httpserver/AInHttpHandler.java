@@ -1,7 +1,6 @@
 package com.mycompany.httpserver;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
@@ -74,9 +73,6 @@ public class AInHttpHandler implements HttpHandler{
 		response = JSONEncoder.genAInResponse((String) reg_str, result, ai_state, msg);		
 		FFHttpServer.logger.debug(String.format("AInHttpHandler: %s", response));
 		
-	    arg0.sendResponseHeaders(200, response.length());
-	    OutputStream os = arg0.getResponseBody();
-	    os.write(response.toString().getBytes());
-	    os.close();
+		Utils.sendResponse(arg0, response);
 	}
 }
