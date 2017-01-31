@@ -67,7 +67,7 @@ public class DOutHttpHandler implements HttpHandler{
 			msg = "Request Params Error";
 		}
 	    
-		response = JSONEncoder.genDOutResponse((String) reg_str, result, msg);
+		response = JSONEncoder.genGenericResponse((String) reg_str, result, msg);
 		FFHttpServer.logger.debug(String.format("DOutHttpHandler: %s", response));
 		
 		Utils.sendResponse(arg0, response);

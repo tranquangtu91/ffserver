@@ -29,7 +29,7 @@ public class CheckOnlineHttpHandler implements HttpHandler {
     		msg = "error";
     	}
     	
-    	response = JSONEncoder.genGenericResponse((String) reg_str, msg);	
+    	response = JSONEncoder.genGenericResponse((String) reg_str, true, msg);	
 		FFHttpServer.logger.debug(String.format("CheckOnlineHttpHandler: %s", response));
         
 		Utils.sendResponse(arg0, response);

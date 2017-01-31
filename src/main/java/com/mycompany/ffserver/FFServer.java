@@ -73,7 +73,6 @@ public class FFServer {
         String reg_str = "";
         while (rs.next()) {
         	reg_str = rs.getString("regs");
-        	logger.info(String.format("add reg_str %s to ff_server", reg_str));
         	addRegDevice(reg_str);
         	DbUtils.updateAllToOffline();
         }
@@ -82,7 +81,13 @@ public class FFServer {
     }
 
     public void addRegDevice(String reg_str) {
+    	logger.debug(String.format("add reg_str '%s' to reg_lst", reg_str));
         dev_info.addRegStr(reg_str);
+    }
+    
+    public void removeRegDevice(String reg_str) {
+    	logger.debug(String.format("remove reg_str '%s' to reg_lst", reg_str));
+        dev_info.removeRegStr(reg_str);
     }
     
     public void addReqToQueue(FFRequest req) {

@@ -8,19 +8,9 @@ import java.util.List;
 import org.json.simple.JSONObject;
 
 public class JSONEncoder {
-	@SuppressWarnings("unchecked")
-	public static String genGenericResponse(String reg_str, String msg) {
-		
-		final JSONObject obj = new JSONObject();
-
-		obj.put("reg_str", reg_str);
-		obj.put("msg", msg);
-		
-		return obj.toJSONString();
-	}
 	
 	@SuppressWarnings("unchecked")
-	public static String genDOutResponse(String reg_str, Boolean result, String msg) {
+	public static String genGenericResponse(String reg_str, Boolean result, String msg) {
 		
 		final JSONObject obj = new JSONObject();
 
@@ -85,7 +75,7 @@ public class JSONEncoder {
 					jobj.put("id", result_set.getInt("id"));
 					jobj.put("reg_str", result_set.getString("regs"));
 					jobj.put("online", result_set.getBoolean("online"));
-					jobj.put("connect_last_time", result_set.getTimestamp("connect_last_time"));
+					jobj.put("connect_last_time", result_set.getString("connect_last_time"));
 					device_info.add(jobj);
 				}
 				obj.put("data", device_info);
