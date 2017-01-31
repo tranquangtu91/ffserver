@@ -31,6 +31,13 @@ public class DbUtils {
 		pstmt.executeUpdate();
 	}
 	
+	public static void RemoveDevice(String reg_str) throws SQLException, ClassNotFoundException {
+		Connection conn = ConnectionUtils.getConnection();
+		PreparedStatement pstmt = conn.prepareStatement("Delete From device_info Where regs = ?");
+		pstmt.setString(1, reg_str);
+		pstmt.executeUpdate();
+	}
+	
 	public static void updateDevice(String name, String reg_str, String desc) throws ClassNotFoundException, SQLException {
 		Connection conn = ConnectionUtils.getConnection();
 		PreparedStatement pstmt = conn.prepareStatement("Update device_info Set regs = ?, description = ? Where name = ?");

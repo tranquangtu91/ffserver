@@ -34,18 +34,24 @@ public class UpdateDeviceHttpHandler implements HttpHandler{
         if (reg_str != null && name != null) {
 	    	try {
 	    		ResultSet rs = DbUtils.getDeviceInfo((String) name);
-	    		String old_regs = "";
+	    		String old_regs = null;
 	    		if (rs.next()) {
 	    			old_regs = rs.getString("regs");
 	    		}
-				DbUtils.updateDevice((String)name, (String) reg_str, (String) desc);
-				if (!old_regs.equals(reg_str)) {
-					MainApplication.ff_server.removeRegDevice(old_regs);
-					MainApplication.ff_server.addRegDevice((String) reg_str);
-					DbUtils.updateOnlineState((String) reg_str, false);
-				}
-				msg = "Success";
-				result = true;
+	    		if (old_regs != null) {
+					DbUtils.updateDevice((String)name, (String) reg_str, (String) desc);
+					if (!old_regs.equals(reg_str)) {
+						MainApplication.ff_server.removeRegDevice(old_regs);
+						MainApplication.ff_server.addRegDevice((String) reg_str);
+						DbUtils.updateOnlineState((String) reg_str, false);
+					}
+					msg = "Success";
+					result = true;
+	    		}
+	    		else 
+	    		{
+	    			msg = "Device does not exist";
+	    		}
 			} catch (Exception e) {
 				msg = e.getMessage();
 			}

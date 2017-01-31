@@ -26,7 +26,7 @@ public class CheckOnlineHttpHandler implements HttpHandler {
     	if (reg_str != null)
     		msg = MainApplication.ff_server.checkOnline(parameters.get("reg_str").toString()) ? "online" : "offline";
     	else {
-    		msg = "error";
+    		msg = "Request Params Error";
     	}
     	
     	response = JSONEncoder.genGenericResponse((String) reg_str, true, msg);	

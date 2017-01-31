@@ -27,6 +27,7 @@ public class FFHttpServer {
         server.createContext("/get_device_list", new GetDeviceListHttpHandler());
         server.createContext("/create_device", new CreateDeviceHttpHandler());
         server.createContext("/update_device", new UpdateDeviceHttpHandler());
+        server.createContext("/remove_device", new RemoveDeviceHttpHandler());
         server.setExecutor(Executors.newFixedThreadPool(20));
 	}
 	

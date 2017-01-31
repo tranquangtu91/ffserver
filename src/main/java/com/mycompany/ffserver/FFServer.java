@@ -86,7 +86,7 @@ public class FFServer {
     }
     
     public void removeRegDevice(String reg_str) {
-    	logger.debug(String.format("remove reg_str '%s' to reg_lst", reg_str));
+    	logger.debug(String.format("remove reg_str '%s' from reg_lst", reg_str));
         dev_info.removeRegStr(reg_str);
     }
     
