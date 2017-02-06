@@ -30,9 +30,13 @@ public class CreateDeviceHttpHandler implements HttpHandler{
         Object reg_str = parameters.get("reg_str");
         Object name = parameters.get("name");
         Object desc = parameters.get("desc");
+        Object lat = parameters.get("lat");
+        Object lng = parameters.get("lng");
         if (reg_str != null && name != null) {
 	    	try {
-				DbUtils.createDevice((String)name, (String) reg_str, (String) desc);
+				DbUtils.createDevice((String)name, (String) reg_str, 
+								(String) desc, lat == null ? 0: Double.parseDouble((String)lat), 
+								lng == null ? 0 : Double.parseDouble((String)lng));
 				MainApplication.ff_server.addRegDevice((String) reg_str);
 				msg = "Success";
 				result = true;

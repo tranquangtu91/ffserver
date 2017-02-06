@@ -31,7 +31,7 @@ public class FFDevice {
     SocketChannel soc;
     public long connect_time;
     
-    int idle_time_interval_s = 120;
+    int idle_time_interval_s = 5;
     String reg_str;
     boolean is_closed = false;
     
@@ -41,9 +41,9 @@ public class FFDevice {
     public FFDevice(SocketChannel ch) {
     	this.req = null;
         this.soc = ch;
-        data_rcv = soc.alloc().buffer(512);
+        this.data_rcv = soc.alloc().buffer(512);
         this.reg_str = "";
-        connect_time = System.currentTimeMillis();
+        this.connect_time = System.currentTimeMillis();
         ChannelPipeline pipeline = ch.pipeline();
         pipeline.addLast(new IdleStateHandler(0, 0, idle_time_interval_s));
         pipeline.addLast(new MessageToByteEncoder<byte[]>() {
@@ -60,6 +60,7 @@ public class FFDevice {
         		ByteBuf bb = (ByteBuf)msg;
                 if (reg_str.equals("")) {
                     reg_str = bb.toString(Charset.defaultCharset());
+                    FFServer.logger.info(String.format("device that has regs %s is registed", reg_str));
                 } else {
                 	FFServer.logger.debug(String.format("%s receive: %d bytes", reg_str, bb.readableBytes()));
                 	data_rcv.writeBytes(bb);
@@ -70,7 +71,8 @@ public class FFDevice {
         	@Override
         	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         		// TODO Auto-generated method stub
-        		super.exceptionCaught(ctx, cause);
+        		FFServer.logger.error(cause);
+        		Close();
         	}
         	
         	@Override
@@ -78,7 +80,10 @@ public class FFDevice {
                 if (evt instanceof IdleStateEvent) {
                     IdleStateEvent event = (IdleStateEvent)evt;
                     if (event.state() == IdleState.ALL_IDLE) {
-                    	FFServer.logger.debug(String.format("%s in idle state", reg_str));
+                    	FFServer.logger.info(String.format("%s in idle state", reg_str));
+
+                    	ByteBuf hb = ctx.alloc().buffer(1).writeByte('.');
+                    	Send(hb);
                     }
                 }
             }
@@ -89,7 +94,7 @@ public class FFDevice {
             @Override
             public void operationComplete(ChannelFuture future) throws Exception {
                 is_closed = true;
-                FFServer.logger.debug(String.format("%s disconnected", reg_str));
+                FFServer.logger.info(String.format("%s disconnected", reg_str));
             }
         });
     }

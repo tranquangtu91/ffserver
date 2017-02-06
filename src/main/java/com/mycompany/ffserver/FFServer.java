@@ -61,6 +61,7 @@ public class FFServer {
             @Override
             protected void initChannel(SocketChannel ch) throws Exception {
                 device_lst.add(new FFDevice(ch));
+                logger.info("have a new connnection");
             }
         });
         bootstrap.childOption(ChannelOption.SO_KEEPALIVE, true);

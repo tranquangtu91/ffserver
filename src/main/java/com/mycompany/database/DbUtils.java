@@ -22,12 +22,14 @@ public class DbUtils {
 		return rs;
 	}
 	
-	public static void createDevice(String name, String reg_str, String desc) throws ClassNotFoundException, SQLException {
+	public static void createDevice(String name, String reg_str, String desc, Double lat, Double lng) throws ClassNotFoundException, SQLException {
 		Connection conn = ConnectionUtils.getConnection();
-		PreparedStatement pstmt = conn.prepareStatement("Insert device_info (name, regs, description, online) Values (?, ?, ?, 0)");
+		PreparedStatement pstmt = conn.prepareStatement("Insert device_info (name, regs, description, latitude, longitude, online) Values (?, ?, ?, ?, ?, 0)");
 		pstmt.setString(1, name);
 		pstmt.setString(2, reg_str);
 		pstmt.setString(3, desc);
+		pstmt.setDouble(4, lat);
+		pstmt.setDouble(5, lng);
 		pstmt.executeUpdate();
 	}
 	

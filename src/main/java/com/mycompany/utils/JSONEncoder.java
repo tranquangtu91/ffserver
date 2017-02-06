@@ -73,9 +73,12 @@ public class JSONEncoder {
 					String rsg_str = result_set.getString("name");
 					jobj.put("name", rsg_str);
 					jobj.put("id", result_set.getInt("id"));
-					jobj.put("reg_str", result_set.getString("regs"));
-					jobj.put("online", result_set.getBoolean("online"));
-					jobj.put("connect_last_time", result_set.getString("connect_last_time"));
+					jobj.put("regs", result_set.getString("regs"));
+					jobj.put("onl", result_set.getBoolean("online"));
+					jobj.put("conn_lt", result_set.getString("connect_last_time"));
+					jobj.put("lat", result_set.getDouble("latitude"));
+					jobj.put("lng", result_set.getDouble("longitude"));
+					jobj.put("desc", result_set.getString("description"));
 					device_info.add(jobj);
 				}
 				obj.put("data", device_info);
