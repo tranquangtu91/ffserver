@@ -31,7 +31,7 @@ public class FFDevice {
     SocketChannel soc;
     public long connect_time;
     
-    int idle_time_interval_s = 5;
+    int idle_time_interval_s = 120;
     String reg_str;
     boolean is_closed = false;
     
