@@ -5,8 +5,6 @@
  */
 package com.mycompany.device;
 
-import java.nio.charset.Charset;
-
 import com.mycompany.ffserver.FFRequest;
 import com.mycompany.ffserver.FFServer;
 
@@ -59,7 +57,12 @@ public class FFDevice {
         		// TODO Auto-generated method stub
         		ByteBuf bb = (ByteBuf)msg;
                 if (reg_str.equals("")) {
-                    reg_str = bb.toString(Charset.defaultCharset());
+                	if (bb.readableBytes() >= 20) {
+                		reg_str = String.format("%08X", bb.getIntLE(0));
+                	} else {
+                		reg_str = "NaN";
+                	}
+                    //reg_str = bb.toString(Charset.defaultCharset());
                     FFServer.logger.info(String.format("device that has regs %s is registed", reg_str));
                 } else {
                 	FFServer.logger.debug(String.format("%s receive: %d bytes", reg_str, bb.readableBytes()));

@@ -10,13 +10,42 @@ import org.json.simple.JSONObject;
 public class JSONEncoder {
 	
 	@SuppressWarnings("unchecked")
-	public static String genGenericResponse(String reg_str, Boolean result, String msg) {
+	public static String genGenericDeviceResponse(String reg_str, Boolean result, String msg) {
 		
 		final JSONObject obj = new JSONObject();
 
 		obj.put("reg_str", reg_str);
 		obj.put("msg", msg);
 		obj.put("result", result);
+		
+		return obj.toJSONString();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static String genGenericUserResponse(String username, Boolean result, String msg, int code) {
+		
+		final JSONObject obj = new JSONObject();
+
+		obj.put("username", username);
+		obj.put("msg", msg);
+		obj.put("result", result);
+		obj.put("code", code);
+		
+		return obj.toJSONString();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static String genUserLoginResponse(String username, Boolean result, String msg, String session_id, int permission) {
+		
+		final JSONObject obj = new JSONObject();
+
+		obj.put("username", username);
+		obj.put("msg", msg);
+		obj.put("result", result);
+		if (result) {
+			obj.put("session_id", session_id);
+			obj.put("permision", permission);
+		}
 		
 		return obj.toJSONString();
 	}

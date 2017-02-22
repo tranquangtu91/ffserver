@@ -18,8 +18,7 @@ import io.netty.buffer.Unpooled;
 public class AInHttpHandler implements HttpHandler{
 	@Override
 	public void handle(HttpExchange arg0) throws IOException {
-		FFHttpServer.logger.debug(String.format("AInHttpHandler: %s", arg0.getRequestURI().toString()));
-		
+		FFHttpServer.logger.debug(String.format("%s -> %s", arg0.getRemoteAddress(), arg0.getRequestURI().toString()));
 		// parse request
 		Map<String, Object> parameters = new HashMap<String, Object>();
 	    String query = arg0.getRequestURI().getRawQuery();
@@ -71,7 +70,7 @@ public class AInHttpHandler implements HttpHandler{
 		}
 	    
 		response = JSONEncoder.genAInResponse((String) reg_str, result, ai_state, msg);		
-		FFHttpServer.logger.debug(String.format("AInHttpHandler: %s", response));
+		FFHttpServer.logger.debug(String.format("%s <- %s", arg0.getRemoteAddress(), response));
 		
 		Utils.sendResponse(arg0, response);
 	}

@@ -14,7 +14,7 @@ public class RemoveDeviceHttpHandler implements HttpHandler{
 	@Override
 	public void handle(HttpExchange arg0) throws IOException {
 		// TODO Auto-generated method stub
-		FFHttpServer.logger.debug(String.format("RemoveDeviceHttpHandler: %s", arg0.getRequestURI().toString()));
+		FFHttpServer.logger.debug(String.format("%s -> %s", arg0.getRemoteAddress(), arg0.getRequestURI().toString()));
 		// parse request
 		Map<String, Object> parameters = new HashMap<String, Object>();
         String query = arg0.getRequestURI().getRawQuery();
@@ -38,8 +38,8 @@ public class RemoveDeviceHttpHandler implements HttpHandler{
     		msg = "Request Params Error";
     	}
     	
-    	response = JSONEncoder.genGenericResponse((String) reg_str, result, msg);	
-		FFHttpServer.logger.debug(String.format("RemoveDeviceHttpHandler: %s", response));
+    	response = JSONEncoder.genGenericDeviceResponse((String) reg_str, result, msg);	
+		FFHttpServer.logger.debug(String.format("%s <- %s", arg0.getRemoteAddress(), response));
 
         Utils.sendResponse(arg0, response);
 	}

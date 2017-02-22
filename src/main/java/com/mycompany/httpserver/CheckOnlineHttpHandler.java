@@ -13,7 +13,7 @@ public class CheckOnlineHttpHandler implements HttpHandler {
 	
 	@Override
 	public void handle(HttpExchange arg0) throws IOException {
-		FFHttpServer.logger.debug(String.format("CheckOnlineHttpHandler: %s", arg0.getRequestURI().toString()));
+		FFHttpServer.logger.debug(String.format("%s -> %s", arg0.getRemoteAddress(), arg0.getRequestURI().toString()));
 		// parse request
 		Map<String, Object> parameters = new HashMap<String, Object>();
         String query = arg0.getRequestURI().getRawQuery();
@@ -29,8 +29,8 @@ public class CheckOnlineHttpHandler implements HttpHandler {
     		msg = "Request Params Error";
     	}
     	
-    	response = JSONEncoder.genGenericResponse((String) reg_str, true, msg);	
-		FFHttpServer.logger.debug(String.format("CheckOnlineHttpHandler: %s", response));
+    	response = JSONEncoder.genGenericDeviceResponse((String) reg_str, true, msg);	
+		FFHttpServer.logger.debug(String.format("%s <- %s", arg0.getRemoteAddress(), response));
         
 		Utils.sendResponse(arg0, response);
 	}

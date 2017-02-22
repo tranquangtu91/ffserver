@@ -11,7 +11,7 @@ import java.util.Map;
 import com.sun.net.httpserver.HttpExchange;
 
 public class Utils {
-	public static void sendResponse(HttpExchange arg0, String response) throws IOException {
+	public static void sendResponse(HttpExchange arg0, String response) throws IOException {		
 		arg0.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
 		arg0.getResponseHeaders().add("Content-Type", "application/json");
         arg0.sendResponseHeaders(200, response.length());

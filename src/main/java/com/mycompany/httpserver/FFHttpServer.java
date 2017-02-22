@@ -2,6 +2,8 @@ package com.mycompany.httpserver;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.Executors;
 
 import org.apache.log4j.Logger;
@@ -14,6 +16,8 @@ public class FFHttpServer {
 	
 	int port;
 	HttpServer server;
+	
+	public static Map<String, SessionInfo> user_manager = new HashMap<String, SessionInfo>();
 	
 	public FFHttpServer(int port) throws IOException {
 		PropertyConfigurator.configure("log4j.properties");
@@ -28,6 +32,8 @@ public class FFHttpServer {
         server.createContext("/create_device", new CreateDeviceHttpHandler());
         server.createContext("/update_device", new UpdateDeviceHttpHandler());
         server.createContext("/remove_device", new RemoveDeviceHttpHandler());
+        server.createContext("/create_user", new CreateUserHttpHandler());
+        server.createContext("/login", new LoginHttpHandler());
         server.setExecutor(Executors.newFixedThreadPool(20));
 	}
 	

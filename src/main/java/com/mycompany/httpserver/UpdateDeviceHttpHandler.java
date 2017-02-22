@@ -15,7 +15,7 @@ public class UpdateDeviceHttpHandler implements HttpHandler{
 	@Override
 	public void handle(HttpExchange arg0) throws IOException {
 		// TODO Auto-generated method stub
-		FFHttpServer.logger.debug(String.format("UpdateDeviceHttpHandler: %s", arg0.getRequestURI().toString()));
+		FFHttpServer.logger.debug(String.format("%s -> %s", arg0.getRemoteAddress(), arg0.getRequestURI().toString()));
 		// parse request
 		Map<String, Object> parameters = new HashMap<String, Object>();
 		int contentLength = Integer.parseInt(arg0.getRequestHeaders().getFirst("Content-length"));
@@ -31,6 +31,8 @@ public class UpdateDeviceHttpHandler implements HttpHandler{
         Object reg_str = parameters.get("reg_str");
         Object name = parameters.get("name");
         Object desc = parameters.get("desc");
+        Object lat = parameters.get("lat");
+        Object lng = parameters.get("lng");
         if (reg_str != null && name != null) {
 	    	try {
 	    		ResultSet rs = DbUtils.getDeviceInfo((String) name);
@@ -39,7 +41,11 @@ public class UpdateDeviceHttpHandler implements HttpHandler{
 	    			old_regs = rs.getString("regs");
 	    		}
 	    		if (old_regs != null) {
-					DbUtils.updateDevice((String)name, (String) reg_str, (String) desc);
+					DbUtils.updateDevice((String)name, 
+							(String) reg_str, 
+							(String) desc, 
+							lat == null ? 0: Double.parseDouble((String)lat), 
+							lng == null ? 0 : Double.parseDouble((String)lng));
 					if (!old_regs.equals(reg_str)) {
 						MainApplication.ff_server.removeRegDevice(old_regs);
 						MainApplication.ff_server.addRegDevice((String) reg_str);
@@ -59,8 +65,8 @@ public class UpdateDeviceHttpHandler implements HttpHandler{
         	msg = "Request Params Error";
         }
     	
-    	response = JSONEncoder.genGenericResponse((String) reg_str, result, msg);
-		FFHttpServer.logger.debug(String.format("UpdateDeviceHttpHandler: %s", response));
+    	response = JSONEncoder.genGenericDeviceResponse((String) reg_str, result, msg);
+		FFHttpServer.logger.debug(String.format("%s <- %s", arg0.getRemoteAddress(), response));
 
         Utils.sendResponse(arg0, response);
 	}
