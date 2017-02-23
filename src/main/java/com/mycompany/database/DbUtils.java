@@ -41,40 +41,61 @@ public class DbUtils {
 		return rs;
 	}
 	
-	public static ResultSet getDeviceInfo(String name) throws ClassNotFoundException, SQLException {
+	public static ResultSet getDeviceList(int user_id) throws ClassNotFoundException, SQLException {
 		Connection conn = ConnectionUtils.getConnection();
-		PreparedStatement pstmt = conn.prepareStatement("Select * From device_info Where name = ?");
-		pstmt.setString(1, name);
+		PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM device_info WHERE user_id = ?");
+		pstmt.setInt(1, user_id);
 		ResultSet rs = pstmt.executeQuery();
 		return rs;
 	}
 	
-	public static void createDevice(String name, String reg_str, String desc, Double lat, Double lng) throws ClassNotFoundException, SQLException {
+	public static ResultSet getDeviceInfo(int user_id, int device_id) throws ClassNotFoundException, SQLException {
 		Connection conn = ConnectionUtils.getConnection();
-		PreparedStatement pstmt = conn.prepareStatement("Insert device_info (name, regs, description, latitude, longitude, online) Values (?, ?, ?, ?, ?, 0)");
+		PreparedStatement pstmt = conn.prepareStatement("Select * From device_info Where id = ? And user_id = ?");
+		pstmt.setInt(1, device_id);
+		pstmt.setInt(2, user_id);
+		ResultSet rs = pstmt.executeQuery();
+		return rs;
+	}
+	
+	public static int createDevice(int user_id, String name, String reg_str, String desc, Double lat, Double lng) throws ClassNotFoundException, SQLException {
+		Connection conn = ConnectionUtils.getConnection();
+		PreparedStatement pstmt = conn.prepareStatement("Insert device_info (name, regs, description, latitude, longitude, online, user_id) Values (?, ?, ?, ?, ?, 0, ?)");
 		pstmt.setString(1, name);
 		pstmt.setString(2, reg_str);
 		pstmt.setString(3, desc);
 		pstmt.setDouble(4, lat);
 		pstmt.setDouble(5, lng);
+		pstmt.setInt(6, user_id);
 		pstmt.executeUpdate();
-	}
-	
-	public static void RemoveDevice(String reg_str) throws SQLException, ClassNotFoundException {
-		Connection conn = ConnectionUtils.getConnection();
-		PreparedStatement pstmt = conn.prepareStatement("Delete From device_info Where regs = ?");
+		
+		pstmt = conn.prepareStatement("Select * From device_info Where regs = ?");
 		pstmt.setString(1, reg_str);
+		ResultSet rs = pstmt.executeQuery();
+		rs.next();
+		int device_id = rs.getInt("id");
+		
+		return device_id;
+	}
+	
+	public static void removeDevice(int user_id, int device_id) throws SQLException, ClassNotFoundException {
+		Connection conn = ConnectionUtils.getConnection();
+		PreparedStatement pstmt = conn.prepareStatement("Delete From device_info Where id = ? AND user_id = ?");
+		pstmt.setInt(1, device_id);
+		pstmt.setInt(2, user_id);
 		pstmt.executeUpdate();
 	}
 	
-	public static void updateDevice(String name, String reg_str, String desc, Double lat, Double lng) throws ClassNotFoundException, SQLException {
+	public static void updateDevice(int user_id, int device_id, String name, String reg_str, String desc, Double lat, Double lng) throws ClassNotFoundException, SQLException {
 		Connection conn = ConnectionUtils.getConnection();
-		PreparedStatement pstmt = conn.prepareStatement("Update device_info Set regs = ?, description = ?, latitude = ?, longitude = ? Where name = ?");
+		PreparedStatement pstmt = conn.prepareStatement("Update device_info Set regs = ?, description = ?, latitude = ?, longitude = ?, name = ? Where id = ? And user_id = ?");
 		pstmt.setString(1, reg_str);
 		pstmt.setString(2, desc);
 		pstmt.setDouble(3, lat);
 		pstmt.setDouble(4, lng);
 		pstmt.setString(5, name);
+		pstmt.setInt(6, device_id);
+		pstmt.setInt(7, user_id);
 		pstmt.executeUpdate();
 	}
 	

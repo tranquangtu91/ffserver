@@ -19,6 +19,8 @@ public class DOutHttpHandler implements HttpHandler{
 	
 	@Override
 	public void handle(HttpExchange arg0) throws IOException {
+		long start_time = System.currentTimeMillis();
+		
 		FFHttpServer.logger.debug(String.format("%s -> %s", arg0.getRemoteAddress(), arg0.getRequestURI().toString()));
 		// parse request
 		Map<String, Object> parameters = new HashMap<String, Object>();
@@ -68,7 +70,7 @@ public class DOutHttpHandler implements HttpHandler{
 		}
 	    
 		response = JSONEncoder.genGenericDeviceResponse((String) reg_str, result, msg);
-		FFHttpServer.logger.debug(String.format("%s <- %s", arg0.getRemoteAddress(), response));
+		FFHttpServer.logger.debug(String.format("%s <- %dms: %s", arg0.getRemoteAddress(), System.currentTimeMillis() - start_time, response));
 		
 		Utils.sendResponse(arg0, response);
 	}

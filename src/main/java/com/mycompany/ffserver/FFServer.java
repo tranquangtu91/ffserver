@@ -98,7 +98,7 @@ public class FFServer {
     			req.have_response = true;
     		} else {
 	    		req_lst.add(req);
-	    		logger.info(String.format("req_lst count: %d", req_lst.size()));
+//	    		logger.debug(String.format("req_lst count: %d", req_lst.size()));
     		}
     	} else {
     		req.response.writeBytes("Device is offline".getBytes());
@@ -152,7 +152,7 @@ public class FFServer {
         			for (int j = 0; j < req_count; j ++) {
         				ff_request = req_lst.get(j);
         				if (ff_request.reg_str.equals(ff_device.getRegStr()) && ff_device.req == null) {
-        					logger.info(String.format("send req to %s", ff_device.getRegStr()));
+        					logger.info(String.format("req --> %s", ff_device.getRegStr()));
         					ff_device.req = ff_request;
         					req_lst.remove(j);
         					break;

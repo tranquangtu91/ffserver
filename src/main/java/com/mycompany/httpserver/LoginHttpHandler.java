@@ -16,6 +16,8 @@ public class LoginHttpHandler implements HttpHandler {
 	@Override
 	public void handle(HttpExchange arg0) throws IOException {
 		// TODO Auto-generated method stub
+		long start_time = System.currentTimeMillis();
+		
 		FFHttpServer.logger.debug(String.format("%s -> %s", arg0.getRemoteAddress(), arg0.getRequestURI().toString()));
 		// parse request
 		Map<String, Object> parameters = new HashMap<String, Object>();
@@ -30,6 +32,7 @@ public class LoginHttpHandler implements HttpHandler {
         String session_id = "";
         int permission_db = 0;
         Boolean result = false;
+        int code = 0;
         ResultSet rs = null;
         
         Object username = parameters.get("username");
@@ -45,8 +48,10 @@ public class LoginHttpHandler implements HttpHandler {
 						session_id = String.format("%d%d", (int)(Math.random()*65535), (int)(Math.random()*65535));
 						
 						SessionInfo session_info = new SessionInfo();
+						session_info.user_id = rs.getInt("id");
+						session_info.username = (String) username;
 						session_info.session_id = session_id;
-						session_info.remote_addr = arg0.getRemoteAddress();
+						session_info.remote_addr = arg0.getRemoteAddress().getAddress();
 						switch (permission_db) {
 							case 1:
 								session_info.permission = EnumPermission.Admintrator;
@@ -55,26 +60,31 @@ public class LoginHttpHandler implements HttpHandler {
 								session_info.permission = EnumPermission.Guest;
 								break;
 						}
+						session_info.update_device_list();
 						
 						FFHttpServer.user_manager.put((String) username, session_info);
 						
 						msg = "Success";
 						result = true;
 					} else {
+						code = -3;
 						msg = "Username not Exist / Password is Invalid";
 					}
 				} else {
+					code = -3;
 					msg = "Username not Exist / Password is Invalid";
 				}
 			} catch (Exception e) {
+				code = -2;
 				msg = e.getMessage();
 			}
         } else {
+        	code = -1;
         	msg = "Request Params Error";
         }
     	
-    	response = JSONEncoder.genUserLoginResponse((String) username, result, msg, session_id, permission_db);
-		FFHttpServer.logger.debug(String.format("%s <- %s", arg0.getRemoteAddress(), response));
+    	response = JSONEncoder.genUserLoginResponse(result, msg, session_id, permission_db, code);
+		FFHttpServer.logger.debug(String.format("%s <- %dms: %s", arg0.getRemoteAddress(), System.currentTimeMillis() - start_time, response));
 
         Utils.sendResponse(arg0, response);
 	}

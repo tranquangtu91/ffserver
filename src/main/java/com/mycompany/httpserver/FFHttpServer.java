@@ -24,7 +24,7 @@ public class FFHttpServer {
 		
 		this.port = port;
 		server = HttpServer.create(new InetSocketAddress(port), 0);
-        server.createContext("/check_online", new CheckOnlineHttpHandler());
+//        server.createContext("/check_online", new CheckOnlineHttpHandler());
         server.createContext("/dout", new DOutHttpHandler());
         server.createContext("/din", new DInHttpHandler());
         server.createContext("/ain", new AInHttpHandler());

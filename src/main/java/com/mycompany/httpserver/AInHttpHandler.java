@@ -18,6 +18,8 @@ import io.netty.buffer.Unpooled;
 public class AInHttpHandler implements HttpHandler{
 	@Override
 	public void handle(HttpExchange arg0) throws IOException {
+		long start_time = System.currentTimeMillis();
+		
 		FFHttpServer.logger.debug(String.format("%s -> %s", arg0.getRemoteAddress(), arg0.getRequestURI().toString()));
 		// parse request
 		Map<String, Object> parameters = new HashMap<String, Object>();
@@ -28,49 +30,65 @@ public class AInHttpHandler implements HttpHandler{
 	    String msg = "";
 	    Boolean result = false;
 	    int ai_state[] = new int[8];
+	    int code = 0;
 	    
-	    Object reg_str = parameters.get("reg_str");
-		if (reg_str != null) {
-			
-			FFRequest req = new FFRequest((String) reg_str, 
-					EnumRequestType.Modbus_0x04, 
-					Unpooled.copiedBuffer(ModbusRTU.GenMsg_GetAI((byte) 0x01, 0x00, 0x08)), 
-					5000);
-			MainApplication.ff_server.addReqToQueue(req);
-			
-			while (!req.have_response && 
-					(req.request_create_time + req.request_time_out_ms + 5000) > System.currentTimeMillis()) {
-				try {
-					Thread.sleep(10);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}       
-			
-			if (req.have_response) {
-				if (!req.result) {
+	    Object device_id = parameters.get("device_id");
+	    Object username = parameters.get("username");
+        Object session_id = parameters.get("session_id");
+        
+		if (username != null && session_id != null && device_id != null) {
+			SessionInfo session_info = FFHttpServer.user_manager.get(username);
+        	if (session_info == null || !session_info.session_id.equals((String)session_id) || !session_info.remote_addr.equals(arg0.getRemoteAddress().getAddress())) {
+    			code = -2;
+    			msg = "De nghi dang nhap";
+    		} else if (session_info.expiry_time < System.currentTimeMillis()) {
+    			code = -3;
+    			msg = "Het phien lam viec, de nghi dang nhap lai";
+    		} else if (!session_info.device_lst.containsKey((String)device_id)) {
+				code = -4;
+    			msg = "Khong co quyen truy cap thiet bi";
+    		} else {
+    			FFRequest req = new FFRequest((String) session_info.device_lst.get(device_id), 
+    					EnumRequestType.Modbus_0x04, 
+    					Unpooled.copiedBuffer(ModbusRTU.GenMsg_GetAI((byte) 0x01, 0x00, 0x08)), 
+    					5000);
+    			MainApplication.ff_server.addReqToQueue(req);
+    			
+    			while (!req.have_response && 
+    					(req.request_create_time + req.request_time_out_ms + 5000) > System.currentTimeMillis()) {
+    				try {
+    					Thread.sleep(10);
+    				} catch (InterruptedException e) {
+    					// TODO Auto-generated catch block
+    					e.printStackTrace();
+    				}
+    			}       
+    			
+    			if (!req.have_response) {
+    				code = -5;
+    				msg = "Timeout";
+    			} else if (!req.result) {
+					code = -6;
 					msg = req.response.toString(Charset.defaultCharset());
-				}
-				else if (req.response.readableBytes() >= 37) {
+				} else if (req.response.readableBytes() < 37) {
+					code = -7;
+					msg = "Error";
+				} else {
 					req.response.readBytes(3);
 					for (int i = 0; i < 8; i ++) {
 						ai_state[i] = req.response.readInt();
 					}					
 					msg = "Success";
 					result = true;
-				} else {
-					msg = "Error";
 				}
-			} else {
-				msg = "Timeout";
-			}
+    		}
 		} else {
+			code = -1;
 			msg = "Request Params Error";
 		}
 	    
-		response = JSONEncoder.genAInResponse((String) reg_str, result, ai_state, msg);		
-		FFHttpServer.logger.debug(String.format("%s <- %s", arg0.getRemoteAddress(), response));
+		response = JSONEncoder.genAInResponse(result, ai_state, msg, code);		
+		FFHttpServer.logger.debug(String.format("%s <- %dms: %s", arg0.getRemoteAddress(), System.currentTimeMillis() - start_time, response));
 		
 		Utils.sendResponse(arg0, response);
 	}

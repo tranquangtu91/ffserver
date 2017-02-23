@@ -65,7 +65,7 @@ public class FFDevice {
                     //reg_str = bb.toString(Charset.defaultCharset());
                     FFServer.logger.info(String.format("device that has regs %s is registed", reg_str));
                 } else {
-                	FFServer.logger.debug(String.format("%s receive: %d bytes", reg_str, bb.readableBytes()));
+                	FFServer.logger.debug(String.format("%s --> %d bytes", reg_str, bb.readableBytes()));
                 	data_rcv.writeBytes(bb);
                 }
                 ReferenceCountUtil.release(msg);
