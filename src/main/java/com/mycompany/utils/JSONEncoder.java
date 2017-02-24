@@ -6,34 +6,9 @@ import java.util.List;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-public class JSONEncoder {
-	
+public class JSONEncoder {	
 	@SuppressWarnings("unchecked")
-	public static String genGenericDeviceResponse(String reg_str, Boolean result, String msg) {
-		
-		final JSONObject obj = new JSONObject();
-
-		obj.put("reg_str", reg_str);
-		obj.put("msg", msg);
-		obj.put("result", result);
-		
-		return obj.toJSONString();
-	}
-	
-	@SuppressWarnings("unchecked")
-	public static String genGenericDeviceResponse(Boolean result, String msg, int code) {
-		
-		final JSONObject obj = new JSONObject();
-		
-		obj.put("msg", msg);
-		obj.put("result", result);
-		obj.put("code", code);
-		
-		return obj.toJSONString();
-	}
-	
-	@SuppressWarnings("unchecked")
-	public static String genGenericUserResponse(Boolean result, String msg, int code) {
+	public static String genGenericResponse(Boolean result, String msg, int code) {
 		
 		final JSONObject obj = new JSONObject();
 

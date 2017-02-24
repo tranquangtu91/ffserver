@@ -64,7 +64,7 @@ public class CreateUserHttpHandler implements HttpHandler{
         	code = -1;
         }
     	
-    	response = JSONEncoder.genGenericUserResponse(result, msg, code);
+    	response = JSONEncoder.genGenericResponse(result, msg, code);
 		FFHttpServer.logger.debug(String.format("%s <- %dms: %s", arg0.getRemoteAddress(), System.currentTimeMillis() - start_time, response));
 
         Utils.sendResponse(arg0, response);
