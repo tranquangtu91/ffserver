@@ -24,7 +24,6 @@ public class FFHttpServer {
 		
 		this.port = port;
 		server = HttpServer.create(new InetSocketAddress(port), 0);
-//        server.createContext("/check_online", new CheckOnlineHttpHandler());
         server.createContext("/dout", new DOutHttpHandler());
         server.createContext("/din", new DInHttpHandler());
         server.createContext("/ain", new AInHttpHandler());
@@ -34,6 +33,7 @@ public class FFHttpServer {
         server.createContext("/remove_device", new RemoveDeviceHttpHandler());
         server.createContext("/create_user", new CreateUserHttpHandler());
         server.createContext("/login", new LoginHttpHandler());
+        server.createContext("/logout", new LogoutHttpHandler());
         server.setExecutor(Executors.newFixedThreadPool(20));
 	}
 	

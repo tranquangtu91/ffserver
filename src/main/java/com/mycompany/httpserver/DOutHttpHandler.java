@@ -39,14 +39,17 @@ public class DOutHttpHandler implements HttpHandler{
 	    Object state = parameters.get("state");
 		if (username != null && session_id != null && device_id != null && dout != null && state != null) {
 			SessionInfo session_info = FFHttpServer.user_manager.get(username);
-        	if (session_info == null || !session_info.session_id.equals((String)session_id) || !session_info.remote_addr.equals(arg0.getRemoteAddress().getAddress())) {
+        	if (session_info == null || !session_info.remote_addr.equals(arg0.getRemoteAddress().getAddress())) {
     			code = -2;
     			msg = "De nghi dang nhap";
+        	} else if (!session_info.session_id.equals((String)session_id)) {
+        		code = -3;
+    			msg = "Tai khoan bi dang nhap tai mot noi khac, de nghi dang nhap lai";
     		} else if (session_info.expiry_time < System.currentTimeMillis()) {
-    			code = -3;
+    			code = -4;
     			msg = "Het phien lam viec, de nghi dang nhap lai";
     		} else if (!session_info.device_lst.containsKey((String)device_id)) {
-				code = -4;
+				code = -5;
     			msg = "Khong co quyen truy cap thiet bi";
     		} else {
 				FFRequest req = new FFRequest(session_info.device_lst.get(device_id), 
@@ -66,13 +69,13 @@ public class DOutHttpHandler implements HttpHandler{
 				}     
 				
     			if (!req.have_response) {
-    				code = -5;
+    				code = -6;
     				msg = "Timeout";
     			} else if (!req.result) {
-					code = -6;
+					code = -7;
 					msg = req.response.toString(Charset.defaultCharset());
 				} else if (!req.response.equals(req.request)) {
-					code = -7;
+					code = -8;
 					msg = "Khong dieu khien duoc";
 				} else {				
 					msg = "Success";

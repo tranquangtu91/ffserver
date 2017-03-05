@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.mycompany.database.DbUtils;
+import com.mycompany.httpserver.SessionInfo.EnumPermission;
 import com.mycompany.main.MainApplication;
 import com.mycompany.utils.JSONEncoder;
 import com.sun.net.httpserver.HttpExchange;
@@ -40,7 +41,7 @@ public class RemoveDeviceHttpHandler implements HttpHandler{
     		} else if (session_info.expiry_time < System.currentTimeMillis()) {
     			code = -3;
     			msg = "Het phien lam viec, de nghi dang nhap lai";
-    		} else if (!session_info.device_lst.containsKey((String)device_id)) {
+    		} else if (!session_info.device_lst.containsKey((String)device_id) || session_info.permission == EnumPermission.Admintrator) {
 				code = -4;
     			msg = "Khong co quyen xoa thiet bi";
 			} else {

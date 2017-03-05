@@ -53,7 +53,7 @@ public class CreateDeviceHttpHandler implements HttpHandler{
 					Integer device_id = DbUtils.createDevice(session_info.user_id, (String)name, (String) reg_str, 
 									(String) desc, lat == null ? 0: Double.parseDouble((String)lat), 
 									lng == null ? 0 : Double.parseDouble((String)lng));
-					msg = "Success";
+					msg = device_id.toString();
 					result = true;
 
 					MainApplication.ff_server.addRegDevice((String) reg_str);
