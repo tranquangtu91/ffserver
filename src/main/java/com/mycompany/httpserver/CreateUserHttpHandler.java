@@ -39,12 +39,13 @@ public class CreateUserHttpHandler implements HttpHandler{
         Object body_password = body_parameters.get("password");
         Object body_permission = body_parameters.get("permission");
         if (username != null && session_id != null && body_username != null && body_password != null && body_permission != null) {
-    		SessionInfo session_info = FFHttpServer.user_manager.get(username);
-    		if (session_info == null || !session_info.session_id.equals((String)session_id) || !session_info.remote_addr.equals(arg0.getRemoteAddress().getAddress())) {
-    			code = -2;
+    		SessionInfo session_info = Utils.user_manager.get(username);
+    		code = Utils.checkSessionInfo(session_info, (String) session_id);
+        	if (code == -1000) {
     			msg = "De nghi dang nhap";
-    		} else if (session_info.expiry_time < System.currentTimeMillis()) {
-    			code = -3;
+        	} else if (code == -1001) {
+    			msg = "Tai khoan bi dang nhap tai mot noi khac, de nghi dang nhap lai";
+    		} else if (code == -1002) {
     			msg = "Het phien lam viec, de nghi dang nhap lai";
     		} else if (session_info.permission != EnumPermission.Admintrator) {
     			code = -4;

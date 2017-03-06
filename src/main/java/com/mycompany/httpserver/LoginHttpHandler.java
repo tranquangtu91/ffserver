@@ -62,13 +62,13 @@ public class LoginHttpHandler implements HttpHandler {
 						}
 						session_info.update_device_list();
 						
-						FFHttpServer.user_manager.put((String) username, session_info);
+						Utils.user_manager.put((String) username, session_info);
 						
 						msg = "Success";
 						result = true;
 					} else {
 						code = -3;
-						msg = "Username not Exist / Password is Invalid";
+						msg = "Username not Exist or Password is Invalid";
 					}
 				} else {
 					code = -3;

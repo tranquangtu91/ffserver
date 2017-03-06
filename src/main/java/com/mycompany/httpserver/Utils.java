@@ -5,12 +5,30 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.sun.net.httpserver.HttpExchange;
 
 public class Utils {
+	public static Map<String, SessionInfo> user_manager = new HashMap<String, SessionInfo>();
+	
+	public static int checkSessionInfo(SessionInfo session_info, String session_id) {
+		int code = 0;
+		if (session_info == null) {
+			code = -100;
+//			msg = "De nghi dang nhap";
+    	} else if (!session_info.session_id.equals(session_id)) {
+    		code = -101;
+//			msg = "Tai khoan bi dang nhap tai mot noi khac, de nghi dang nhap lai";
+		} else if (session_info.expiry_time < System.currentTimeMillis()) {
+			code = -102;
+//			msg = "Het phien lam viec, de nghi dang nhap lai";
+		} 
+		return code;
+	}
+	
 	public static void sendResponse(HttpExchange arg0, String response) throws IOException {		
 		arg0.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
 		arg0.getResponseHeaders().add("Content-Type", "application/json");

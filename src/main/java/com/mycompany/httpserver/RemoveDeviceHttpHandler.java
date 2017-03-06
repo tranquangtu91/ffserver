@@ -33,13 +33,14 @@ public class RemoveDeviceHttpHandler implements HttpHandler{
         Object session_id = parameters.get("session_id");
         
     	if (username != null && session_id != null && device_id != null) {
-    		SessionInfo session_info = FFHttpServer.user_manager.get(username);
+    		SessionInfo session_info = Utils.user_manager.get(username);
     		int id = Integer.parseInt((String)device_id);
-        	if (session_info == null || !session_info.session_id.equals((String)session_id) || !session_info.remote_addr.equals(arg0.getRemoteAddress().getAddress())) {
-    			code = -2;
+    		code = Utils.checkSessionInfo(session_info, (String) session_id);
+        	if (code == -1000) {
     			msg = "De nghi dang nhap";
-    		} else if (session_info.expiry_time < System.currentTimeMillis()) {
-    			code = -3;
+        	} else if (code == -1001) {
+    			msg = "Tai khoan bi dang nhap tai mot noi khac, de nghi dang nhap lai";
+    		} else if (code == -1002) {
     			msg = "Het phien lam viec, de nghi dang nhap lai";
     		} else if (!session_info.device_lst.containsKey((String)device_id) || session_info.permission == EnumPermission.Admintrator) {
 				code = -4;

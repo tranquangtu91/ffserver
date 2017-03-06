@@ -42,13 +42,14 @@ public class UpdateDeviceHttpHandler implements HttpHandler{
         Object lat = body_parameters.get("lat");
         Object lng = body_parameters.get("lng");
         if (username != null && session_id != null && reg_str != null && name != null && id != null) {
-        	SessionInfo session_info = FFHttpServer.user_manager.get(username);
+        	SessionInfo session_info = Utils.user_manager.get(username);
         	int device_id = Integer.parseInt((String)id);
-        	if (session_info == null || !session_info.session_id.equals((String)session_id) || !session_info.remote_addr.equals(arg0.getRemoteAddress().getAddress())) {
-    			code = -2;
+        	code = Utils.checkSessionInfo(session_info, (String) session_id);
+        	if (code == -1000) {
     			msg = "De nghi dang nhap";
-    		} else if (session_info.expiry_time < System.currentTimeMillis()) {
-    			code = -3;
+        	} else if (code == -1001) {
+    			msg = "Tai khoan bi dang nhap tai mot noi khac, de nghi dang nhap lai";
+    		} else if (code == -1002) {
     			msg = "Het phien lam viec, de nghi dang nhap lai";
     		} else {
 				String old_regs = (String)session_info.device_lst.get((String)id);

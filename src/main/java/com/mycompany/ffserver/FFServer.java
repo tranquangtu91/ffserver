@@ -32,7 +32,7 @@ public class FFServer {
     public int port;
     public static int max_req_queue_size = 2;
     
-    public FFDevInfo dev_info;
+    public FFDeviceInfo dev_info;
     public List<FFDevice> device_lst;
     
     List<FFRequest> req_lst;
@@ -42,7 +42,7 @@ public class FFServer {
     	
         this.port = 9100;
         
-        dev_info = new FFDevInfo(50);
+        dev_info = new FFDeviceInfo(50);
         
         device_lst = new ArrayList<FFDevice>(50);
         
@@ -82,12 +82,12 @@ public class FFServer {
     }
 
     public void addRegDevice(String reg_str) {
-    	logger.debug(String.format("add reg_str '%s' to reg_lst", reg_str));
+    	logger.debug(String.format("add '%s' to reg_lst", reg_str));
         dev_info.addRegStr(reg_str);
     }
     
     public void removeRegDevice(String reg_str) {
-    	logger.debug(String.format("remove reg_str '%s' from reg_lst", reg_str));
+    	logger.debug(String.format("remove '%s' from reg_lst", reg_str));
         dev_info.removeRegStr(reg_str);
     }
     
@@ -165,7 +165,7 @@ public class FFServer {
             	dev_info.freeAllRegStr();
                 
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(5);
                 } catch (InterruptedException ex) {
                 	System.err.println(ex.getMessage());
                 }

@@ -2,8 +2,6 @@ package com.mycompany.httpserver;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.Executors;
 
 import org.apache.log4j.Logger;
@@ -16,8 +14,6 @@ public class FFHttpServer {
 	
 	int port;
 	HttpServer server;
-	
-	public static Map<String, SessionInfo> user_manager = new HashMap<String, SessionInfo>();
 	
 	public FFHttpServer(int port) throws IOException {
 		PropertyConfigurator.configure("log4j.properties");
