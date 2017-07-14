@@ -28,67 +28,69 @@ import io.netty.util.ReferenceCountUtil;
  * @author TuTQ
  */
 public class FFDevice {
+
     SocketChannel soc;
     public long connect_time;
-    
+
     int idle_time_interval_s = 120;
     String reg_str;
     boolean is_closed = false;
-    
+
     ByteBuf data_rcv;
     public FFRequest req;
 
     public FFDevice(SocketChannel ch) {
-    	this.req = null;
+        this.req = null;
         this.soc = ch;
         this.data_rcv = soc.alloc().buffer(512);
         this.reg_str = "";
         this.connect_time = System.currentTimeMillis();
+
         ChannelPipeline pipeline = ch.pipeline();
         pipeline.addLast(new IdleStateHandler(0, 0, idle_time_interval_s));
         pipeline.addLast(new MessageToByteEncoder<byte[]>() {
-        	@Override
-        	protected void encode(ChannelHandlerContext ctx, byte[] msg, ByteBuf out) throws Exception {
-        		// TODO Auto-generated method stub
-        		out.writeBytes(msg);
-        	}
-		});
+            @Override
+            protected void encode(ChannelHandlerContext ctx, byte[] msg, ByteBuf out) throws Exception {
+                // TODO Auto-generated method stub
+                out.writeBytes(msg);
+            }
+        });
         pipeline.addLast(new ChannelInboundHandlerAdapter() {
-        	@Override
-        	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        		// TODO Auto-generated method stub
-        		ByteBuf bb = (ByteBuf)msg;
+            @Override
+            public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+                // TODO Auto-generated method stub
+                ByteBuf bb = (ByteBuf) msg;
                 if (reg_str.equals("")) {
                     reg_str = bb.toString(Charset.defaultCharset());
                     FFServer.logger.info(String.format("device that has regs %s is registed", reg_str));
                 } else {
-                	FFServer.logger.debug(String.format("%s receive: %d bytes", reg_str, bb.readableBytes()));
-                	data_rcv.writeBytes(bb);
+                    FFServer.logger.debug(String.format("%s receive: %d bytes", reg_str, bb.readableBytes()));
+                    data_rcv.writeBytes(bb);
                 }
                 ReferenceCountUtil.release(msg);
-        	}
-        	
-        	@Override
-        	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        		// TODO Auto-generated method stub
-        		FFServer.logger.error(cause);
-        		Close();
-        	}
-        	
-        	@Override
+            }
+
+            @Override
+            public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+                // TODO Auto-generated method stub
+                FFServer.logger.error(cause);
+                Close();
+            }
+
+            @Override
             public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
                 if (evt instanceof IdleStateEvent) {
-                    IdleStateEvent event = (IdleStateEvent)evt;
+                    IdleStateEvent event = (IdleStateEvent) evt;
                     if (event.state() == IdleState.ALL_IDLE) {
-                    	FFServer.logger.info(String.format("%s in idle state", reg_str));
+                        FFServer.logger.info(String.format("%s in idle state", reg_str));
 
-                    	ByteBuf hb = ctx.alloc().buffer(1).writeByte('.');
-                    	Send(hb);
+                        ByteBuf hb = ctx.alloc().buffer(1).writeByte('.');
+                        Send(hb);
                     }
                 }
             }
         });
-        
+
         ChannelFuture f = soc.closeFuture();
         f.addListener((ChannelFutureListener) new ChannelFutureListener() {
             @Override
@@ -98,75 +100,79 @@ public class FFDevice {
             }
         });
     }
-    
+
     public String getRegStr() {
         return reg_str;
     }
-    
+
     public boolean isClosed() {
         return is_closed;
     }
-    
+
     public void Close() {
         FFServer.logger.debug("com.mycompany.device.FFDevice.close()");
         soc.close();
     }
-    
+
     public void Send(Object data) {
-    	if (is_closed) return;
-    	soc.writeAndFlush(data);
+        if (is_closed) {
+            return;
+        }
+        soc.writeAndFlush(data);
     }
-    
+
     public void clearDataRcv() {
-    	data_rcv.clear();
+        data_rcv.clear();
     }
-    
+
     public void Process() {
-    	if (req == null) return;
-    	
-    	if (!req.is_waiting) {
-	    	req.is_waiting = true;
-	    	Send(req.request.array());
-	    	data_rcv.clear();
-    	} else {
-    		if (req.request_create_time + req.request_time_out_ms < System.currentTimeMillis()) {
-    			req.have_response = true;
-    	    	req.response.writeBytes("Device online but not response".getBytes());
-    	    	req = null;
-    	    	return;
-    		}
-    		
-    		switch (req.request_type) {
-				case Modbus_0x05:
-		    		if (data_rcv.readableBytes() >= 8) {
-		    	    	req.have_response = true;
-		    	    	req.response = data_rcv;
-		    	    	req.result = true;
-		    	    	req = null;
-		    	    	return;
-		    		}
-					break;
-				case Modbus_0x04:
-					if (data_rcv.readableBytes() >= 37) {
-						req.have_response = true;
-		    	    	req.response = data_rcv;
-		    	    	req.result = true;
-		    	    	req = null;
-		    	    	return;
-					}
-					break;
-				case Modbus_0x02:
-					if (data_rcv.readableBytes() >= 6) {
-						req.have_response = true;
-		    	    	req.response = data_rcv;
-		    	    	req.result = true;
-		    	    	req = null;
-		    	    	return;
-					}
-					break;
-				default:
-					break;
-			}
-    	}
+        if (req == null) {
+            return;
+        }
+
+        if (!req.is_waiting) {
+            req.is_waiting = true;
+            Send(req.request.array());
+            data_rcv.clear();
+        } else {
+            if (req.request_create_time + req.request_time_out_ms < System.currentTimeMillis()) {
+                req.have_response = true;
+                req.response.writeBytes("Device online but not response".getBytes());
+                req = null;
+                return;
+            }
+
+            switch (req.request_type) {
+                case Modbus_0x05:
+                    if (data_rcv.readableBytes() >= 8) {
+                        req.have_response = true;
+                        req.response = data_rcv;
+                        req.result = true;
+                        req = null;
+                        return;
+                    }
+                    break;
+                case Modbus_0x04:
+                    if (data_rcv.readableBytes() >= 37) {
+                        req.have_response = true;
+                        req.response = data_rcv;
+                        req.result = true;
+                        req = null;
+                        return;
+                    }
+                    break;
+                case Modbus_0x02:
+                    if (data_rcv.readableBytes() >= 6) {
+                        req.have_response = true;
+                        req.response = data_rcv;
+                        req.result = true;
+                        req = null;
+                        return;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

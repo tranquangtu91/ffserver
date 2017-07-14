@@ -18,19 +18,22 @@ import com.mycompany.httpserver.FFHttpServer;
  * @author TuTQ
  */
 public class MainApplication {
-	static Logger logger = Logger.getLogger(MainApplication.class.getName());
-	
-	public static FFServer ff_server;
-	static FFHttpServer ff_http_server;
-	
+
+    static Logger logger = Logger.getLogger(MainApplication.class.getName());
+
+    public static FFServer ff_server;
+    static FFHttpServer ff_http_server;
+
     public static void main(String[] args) throws InterruptedException, IOException, ClassNotFoundException, SQLException {
-    	PropertyConfigurator.configure("log4j.properties");
-    	
+        PropertyConfigurator.configure("log4j.properties");
+
         ff_server = new FFServer();
         ff_server.port = Integer.parseInt(args[0]);
         ff_server.Start();
-        
+
         ff_http_server = new FFHttpServer(Integer.parseInt(args[1]));
         ff_http_server.Start();
+
+        logger.info("Wait For Termination Request...");
     }
 }
