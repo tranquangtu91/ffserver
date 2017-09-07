@@ -1,0 +1,1665 @@
+17-07-10 22:56:20 INFO  FFServer:152 - ff_server module started
+17-07-10 22:56:20 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-10 22:56:20 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-10 22:56:20 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-10 22:56:20 INFO  MainApplication:37 - wait For Termination Request...
+17-07-10 22:56:20 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-10 22:56:20 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-10 22:56:20 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-10 22:56:20 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-10 22:56:20 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-10 22:56:20 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-10 22:56:20 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-10 22:56:20 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-10 22:56:20 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-10 22:56:20 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-10 22:56:20 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-10 22:56:20 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-10 22:56:20 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-10 22:56:20 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-10 22:56:20 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-10 22:56:20 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-10 22:56:20 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-10 22:56:20 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-10 22:56:20 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-10 22:56:20 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@353e96cd
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@163a0e54
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1b6b949
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@35a5a27e
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@746cd2f9
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@32623a8e
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@62ab17a
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e845593
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2de6c9a0
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7cf9fb1
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7cd0b5ab
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@630d3c4a
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@783d5242
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@37468e3
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7af0e8cb
+17-07-10 22:56:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@701564b3
+17-07-10 22:56:20 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 4015 (auto-detected)
+17-07-10 22:56:20 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-10 22:56:20 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-10 22:56:20 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-10 22:56:20 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-10 22:56:20 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-10 22:56:20 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x891d3e13cddabd1a
+17-07-10 22:56:20 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-10 22:56:20 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-10 22:56:20 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-10 22:56:20 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-10 22:56:20 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-10 22:56:20 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-10 22:56:20 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-10 22:56:20 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-10 22:56:20 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-10 22:56:20 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-10 22:56:20 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-10 22:56:20 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-10 22:56:20 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-10 22:56:20 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-10 22:56:20 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-10 22:56:20 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/ffserverdb?autoReconnect=true
+17-07-10 22:56:24 ERROR MySQLConnUtils:29 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-10 23:16:56 INFO  FFServer:154 - ff_server module started
+17-07-10 23:16:56 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-10 23:16:56 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-10 23:16:56 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-10 23:16:56 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-10 23:16:56 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-10 23:16:56 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-10 23:16:56 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-10 23:16:56 INFO  MainApplication:37 - wait For Termination Request...
+17-07-10 23:16:56 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-10 23:16:56 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-10 23:16:56 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-10 23:16:56 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-10 23:16:56 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-10 23:16:56 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-10 23:16:56 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-10 23:16:56 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-10 23:16:56 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-10 23:16:56 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-10 23:16:56 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-10 23:16:56 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-10 23:16:56 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-10 23:16:56 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-10 23:16:56 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-10 23:16:56 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@266f9a5b
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@30383f6f
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4e78c508
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@672c6889
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3d4b8b75
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4c7908f4
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@44a1c4f6
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@404d84cb
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5c6b46d1
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e91d01b
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@b544bbc
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3e7ea850
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@38253c80
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@28242297
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1048584
+17-07-10 23:16:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4af391dc
+17-07-10 23:16:56 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 4791 (auto-detected)
+17-07-10 23:16:56 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-10 23:16:56 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-10 23:16:56 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-10 23:16:56 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-10 23:16:56 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-10 23:16:56 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x55b877350e32083a
+17-07-10 23:16:56 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-10 23:16:57 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-10 23:16:57 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-10 23:16:57 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-10 23:16:57 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-10 23:16:57 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-10 23:16:57 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-10 23:16:57 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-10 23:16:57 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-10 23:16:57 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-10 23:16:57 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-10 23:16:57 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-10 23:16:57 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-10 23:16:57 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-10 23:16:57 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-10 23:16:57 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/ffserverdb?autoReconnect=true
+17-07-10 23:17:02 ERROR MySQLConnUtils:29 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-10 23:21:27 INFO  FFServer:154 - ff_server module started
+17-07-10 23:21:27 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-10 23:21:27 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-10 23:21:27 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-10 23:21:27 INFO  MainApplication:37 - wait For Termination Request...
+17-07-10 23:21:27 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-10 23:21:27 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-10 23:21:27 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-10 23:21:27 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-10 23:21:27 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-10 23:21:27 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-10 23:21:27 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-10 23:21:27 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-10 23:21:27 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-10 23:21:27 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-10 23:21:27 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-10 23:21:27 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-10 23:21:27 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-10 23:21:27 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-10 23:21:27 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-10 23:21:27 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-10 23:21:27 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-10 23:21:27 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-10 23:21:27 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-10 23:21:27 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@20abd2a2
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6f5e117
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@266f9a5b
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@30383f6f
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4e78c508
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@672c6889
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3d4b8b75
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4c7908f4
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1c51302d
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@343035eb
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5c6b46d1
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e91d01b
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@b544bbc
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3e7ea850
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@38253c80
+17-07-10 23:21:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@28242297
+17-07-10 23:21:27 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 5107 (auto-detected)
+17-07-10 23:21:27 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-10 23:21:27 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-10 23:21:27 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-10 23:21:27 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-10 23:21:27 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-10 23:21:27 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x396d58381b677f79
+17-07-10 23:21:27 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-10 23:21:27 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-10 23:21:27 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-10 23:21:27 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-10 23:21:27 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-10 23:21:27 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-10 23:21:27 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-10 23:21:27 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-10 23:21:27 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-10 23:21:27 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-10 23:21:27 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-10 23:21:27 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-10 23:21:27 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-10 23:21:27 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-10 23:21:27 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-10 23:21:27 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/ffserverdb?autoReconnect=true
+17-07-10 23:21:32 ERROR MySQLConnUtils:29 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-10 23:23:01 INFO  FFServer:154 - ff_server module started
+17-07-10 23:23:01 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-10 23:23:01 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-10 23:23:01 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-10 23:23:01 INFO  MainApplication:37 - wait For Termination Request...
+17-07-10 23:23:01 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-10 23:23:01 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-10 23:23:01 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-10 23:23:01 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-10 23:23:01 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-10 23:23:01 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-10 23:23:01 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-10 23:23:01 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-10 23:23:01 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-10 23:23:01 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-10 23:23:01 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-10 23:23:01 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-10 23:23:01 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-10 23:23:01 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-10 23:23:01 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-10 23:23:01 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-10 23:23:01 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-10 23:23:01 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-10 23:23:01 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-10 23:23:01 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@20abd2a2
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6f5e117
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@266f9a5b
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@30383f6f
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4e78c508
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@672c6889
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3d4b8b75
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4c7908f4
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1c51302d
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@343035eb
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5c6b46d1
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e91d01b
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@b544bbc
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3e7ea850
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@38253c80
+17-07-10 23:23:01 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@28242297
+17-07-10 23:23:01 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 5291 (auto-detected)
+17-07-10 23:23:01 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-10 23:23:01 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-10 23:23:01 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-10 23:23:01 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-10 23:23:01 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-10 23:23:01 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x6d26c8092295db8f
+17-07-10 23:23:01 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-10 23:23:01 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-10 23:23:01 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-10 23:23:01 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-10 23:23:01 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-10 23:23:01 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-10 23:23:01 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-10 23:23:01 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-10 23:23:01 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-10 23:23:01 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-10 23:23:01 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-10 23:23:01 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-10 23:23:01 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-10 23:23:01 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-10 23:23:01 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-10 23:23:01 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/ffserverdb?autoReconnect=true
+17-07-10 23:23:05 ERROR MySQLConnUtils:29 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-10 23:23:37 INFO  FFServer:154 - ff_server module started
+17-07-10 23:23:37 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-10 23:23:37 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-10 23:23:37 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-10 23:23:37 INFO  MainApplication:37 - wait For Termination Request...
+17-07-10 23:23:37 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-10 23:23:37 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-10 23:23:37 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-10 23:23:37 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-10 23:23:37 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-10 23:23:37 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-10 23:23:37 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-10 23:23:37 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-10 23:23:37 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-10 23:23:37 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-10 23:23:37 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-10 23:23:37 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-10 23:23:37 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-10 23:23:37 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-10 23:23:37 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-10 23:23:37 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-10 23:23:37 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-10 23:23:37 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-10 23:23:37 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-10 23:23:37 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@20abd2a2
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6f5e117
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@266f9a5b
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@30383f6f
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4e78c508
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@672c6889
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3d4b8b75
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4c7908f4
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1c51302d
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@343035eb
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5c6b46d1
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e91d01b
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@b544bbc
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3e7ea850
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@38253c80
+17-07-10 23:23:37 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@28242297
+17-07-10 23:23:37 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 5390 (auto-detected)
+17-07-10 23:23:37 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-10 23:23:37 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-10 23:23:37 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-10 23:23:37 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-10 23:23:37 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-10 23:23:37 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x699ac6bd44ec3920
+17-07-10 23:23:37 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-10 23:23:37 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-10 23:23:37 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-10 23:23:37 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-10 23:23:37 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-10 23:23:37 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-10 23:23:37 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-10 23:23:37 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-10 23:23:37 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-10 23:23:37 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-10 23:23:37 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-10 23:23:37 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-10 23:23:37 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-10 23:23:37 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-10 23:23:37 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-10 23:23:37 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/ffserverdb?autoReconnect=true
+17-07-10 23:23:42 ERROR MySQLConnUtils:29 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-11 08:30:25 INFO  FFServer:154 - ff_server module started
+17-07-11 08:30:25 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-11 08:30:25 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-11 08:30:25 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-11 08:30:25 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-11 08:30:25 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-11 08:30:25 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-11 08:30:25 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-11 08:30:25 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-11 08:30:25 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-11 08:30:25 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-11 08:30:25 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-11 08:30:25 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-11 08:30:25 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-11 08:30:25 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-11 08:30:25 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-11 08:30:25 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-11 08:30:25 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-11 08:30:25 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-11 08:30:25 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-11 08:30:25 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-11 08:30:25 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-11 08:30:25 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-11 08:30:25 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-11 08:30:25 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@266f9a5b
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@30383f6f
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4e78c508
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@672c6889
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3d4b8b75
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4c7908f4
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@44a1c4f6
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@404d84cb
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5c6b46d1
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e91d01b
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@b544bbc
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3e7ea850
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@38253c80
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@28242297
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1048584
+17-07-11 08:30:25 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4af391dc
+17-07-11 08:30:25 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 6556 (auto-detected)
+17-07-11 08:30:25 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-11 08:30:25 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-11 08:30:25 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-11 08:30:25 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-11 08:30:25 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-11 08:30:25 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x927a5262ecfc5f7b
+17-07-11 08:30:25 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-11 08:30:25 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-11 08:30:25 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-11 08:30:25 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-11 08:30:25 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-11 08:30:25 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-11 08:30:25 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-11 08:30:25 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-11 08:30:25 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-11 08:30:25 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-11 08:30:25 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-11 08:30:25 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-11 08:30:25 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-11 08:30:25 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-11 08:30:25 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-11 08:30:25 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/ffserverdb?autoReconnect=true
+17-07-11 08:30:30 ERROR MySQLConnUtils:29 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-11 08:38:59 INFO  FFServer:154 - ff_server module started
+17-07-11 08:38:59 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-11 08:38:59 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-11 08:38:59 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-11 08:38:59 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-11 08:38:59 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-11 08:38:59 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-11 08:38:59 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-11 08:38:59 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-11 08:38:59 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-11 08:38:59 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-11 08:38:59 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-11 08:38:59 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-11 08:38:59 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-11 08:38:59 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-11 08:38:59 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-11 08:38:59 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-11 08:38:59 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-11 08:38:59 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-11 08:38:59 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-11 08:38:59 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-11 08:38:59 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-11 08:38:59 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-11 08:38:59 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-11 08:38:59 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@20abd2a2
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6f5e117
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@266f9a5b
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@30383f6f
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4e78c508
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@672c6889
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3d4b8b75
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4c7908f4
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1c51302d
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@343035eb
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5c6b46d1
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e91d01b
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@b544bbc
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3e7ea850
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@38253c80
+17-07-11 08:38:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@28242297
+17-07-11 08:38:59 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 6901 (auto-detected)
+17-07-11 08:38:59 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-11 08:38:59 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-11 08:38:59 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-11 08:38:59 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-11 08:38:59 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-11 08:38:59 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0xcfb9db198a66d0e3
+17-07-11 08:38:59 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-11 08:38:59 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-11 08:38:59 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-11 08:38:59 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-11 08:38:59 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-11 08:38:59 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-11 08:38:59 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-11 08:38:59 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-11 08:38:59 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-11 08:38:59 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-11 08:38:59 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-11 08:38:59 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-11 08:38:59 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-11 08:38:59 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-11 08:38:59 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-11 08:38:59 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/ffserverdb?autoReconnect=true
+17-07-11 08:39:04 ERROR MySQLConnUtils:29 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-11 08:39:04 ERROR MySQLConnUtils:30 - SQLState: 08001
+17-07-11 08:39:04 ERROR MySQLConnUtils:31 - VendorError: 0
+17-07-11 08:39:54 INFO  FFServer:154 - ff_server module started
+17-07-11 08:39:54 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-11 08:39:54 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-11 08:39:54 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-11 08:39:55 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-11 08:39:55 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-11 08:39:55 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-11 08:39:55 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-11 08:39:55 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-11 08:39:55 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-11 08:39:55 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-11 08:39:55 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-11 08:39:55 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-11 08:39:55 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-11 08:39:55 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-11 08:39:55 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-11 08:39:55 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-11 08:39:55 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-11 08:39:55 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-11 08:39:55 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-11 08:39:55 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-11 08:39:55 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-11 08:39:55 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-11 08:39:55 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-11 08:39:55 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@20abd2a2
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6f5e117
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@266f9a5b
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@30383f6f
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4e78c508
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@672c6889
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3d4b8b75
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4c7908f4
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1c51302d
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@343035eb
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5c6b46d1
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e91d01b
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@b544bbc
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3e7ea850
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@38253c80
+17-07-11 08:39:55 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@28242297
+17-07-11 08:39:55 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 7007 (auto-detected)
+17-07-11 08:39:55 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-11 08:39:55 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-11 08:39:55 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-11 08:39:55 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-11 08:39:55 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-11 08:39:55 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x786c6e6d50fba4f6
+17-07-11 08:39:55 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-11 08:39:55 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-11 08:39:55 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-11 08:39:55 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-11 08:39:55 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-11 08:39:55 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-11 08:39:55 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-11 08:39:55 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-11 08:39:55 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-11 08:39:55 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-11 08:39:55 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-11 08:39:55 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-11 08:39:55 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-11 08:39:55 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-11 08:39:55 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-11 08:39:55 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/test?autoReconnect=true
+17-07-11 08:39:59 ERROR MySQLConnUtils:29 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-11 08:39:59 ERROR MySQLConnUtils:30 - SQLState: 08001
+17-07-11 08:39:59 ERROR MySQLConnUtils:31 - VendorError: 0
+17-07-11 08:42:53 INFO  FFServer:154 - ff_server module started
+17-07-11 08:42:53 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-11 08:42:53 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-11 08:42:53 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-11 08:42:54 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-11 08:42:54 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-11 08:42:54 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-11 08:42:54 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-11 08:42:54 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-11 08:42:54 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-11 08:42:54 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-11 08:42:54 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-11 08:42:54 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-11 08:42:54 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-11 08:42:54 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-11 08:42:54 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-11 08:42:54 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-11 08:42:54 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-11 08:42:54 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-11 08:42:54 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-11 08:42:54 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-11 08:42:54 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-11 08:42:54 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-11 08:42:54 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-11 08:42:54 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@353e96cd
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@163a0e54
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1b6b949
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@35a5a27e
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@746cd2f9
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@32623a8e
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@62ab17a
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e845593
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2de6c9a0
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7cf9fb1
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7cd0b5ab
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@630d3c4a
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@783d5242
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@37468e3
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7af0e8cb
+17-07-11 08:42:54 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@701564b3
+17-07-11 08:42:54 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 7152 (auto-detected)
+17-07-11 08:42:54 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-11 08:42:54 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-11 08:42:54 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-11 08:42:54 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-11 08:42:54 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-11 08:42:54 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x72d78c63e438f7d4
+17-07-11 08:42:54 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-11 08:42:54 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-11 08:42:54 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-11 08:42:54 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-11 08:42:54 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-11 08:42:54 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-11 08:42:54 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-11 08:42:54 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-11 08:42:54 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-11 08:42:54 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-11 08:42:54 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-11 08:42:54 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-11 08:42:54 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-11 08:42:54 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-11 08:42:54 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-11 08:42:54 INFO  MySQLConnUtils:26 - jdbc:mysql://demomap.ddns.net:3306/ffserverdb?autoReconnect=true
+17-07-11 08:42:58 ERROR MySQLConnUtils:29 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-11 08:42:58 ERROR MySQLConnUtils:30 - SQLState: 08001
+17-07-11 08:42:58 ERROR MySQLConnUtils:31 - VendorError: 0
+17-07-11 08:45:21 INFO  FFServer:154 - ff_server module started
+17-07-11 08:45:21 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-11 08:45:21 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-11 08:45:21 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-11 08:45:21 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-11 08:45:21 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-11 08:45:21 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-11 08:45:21 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-11 08:45:21 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-11 08:45:21 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-11 08:45:21 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-11 08:45:21 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-11 08:45:21 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-11 08:45:21 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-11 08:45:21 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-11 08:45:21 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-11 08:45:21 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-11 08:45:21 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-11 08:45:21 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-11 08:45:21 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-11 08:45:21 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-11 08:45:21 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-11 08:45:21 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-11 08:45:21 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-11 08:45:21 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@353e96cd
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@163a0e54
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1b6b949
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@35a5a27e
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@746cd2f9
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@32623a8e
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@62ab17a
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e845593
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2de6c9a0
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7cf9fb1
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7cd0b5ab
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@630d3c4a
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@783d5242
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@37468e3
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7af0e8cb
+17-07-11 08:45:21 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@701564b3
+17-07-11 08:45:21 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 7226 (auto-detected)
+17-07-11 08:45:21 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-11 08:45:21 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-11 08:45:21 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-11 08:45:21 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-11 08:45:21 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-11 08:45:21 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x8ead9504ec10ef19
+17-07-11 08:45:21 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-11 08:45:21 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-11 08:45:21 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-11 08:45:21 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-11 08:45:21 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-11 08:45:21 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-11 08:45:21 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-11 08:45:21 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-11 08:45:21 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-11 08:45:21 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-11 08:45:21 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-11 08:45:21 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-11 08:45:21 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-11 08:45:21 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-11 08:45:21 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-11 08:45:21 INFO  MySQLConnUtils:26 - jdbc:mysql://demomap.ddns.net:3306/ffserverdb?autoReconnect=true&user=root&password=
+17-07-11 08:45:26 ERROR MySQLConnUtils:29 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-11 08:45:26 ERROR MySQLConnUtils:30 - SQLState: 08001
+17-07-11 08:45:26 ERROR MySQLConnUtils:31 - VendorError: 0
+17-07-11 08:46:13 INFO  FFServer:154 - ff_server module started
+17-07-11 08:46:13 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-11 08:46:13 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-11 08:46:13 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-11 08:46:13 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-11 08:46:13 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-11 08:46:13 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-11 08:46:13 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-11 08:46:13 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-11 08:46:13 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-11 08:46:13 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-11 08:46:13 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-11 08:46:13 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-11 08:46:13 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-11 08:46:13 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-11 08:46:13 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-11 08:46:13 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-11 08:46:13 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-11 08:46:13 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-11 08:46:13 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-11 08:46:13 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-11 08:46:13 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-11 08:46:13 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-11 08:46:13 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-11 08:46:13 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1ff9c5a5
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5787c712
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@54b88b60
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@44a62056
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1523018a
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7cf5fb6b
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6c068c1e
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1957a558
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@62dae876
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5edd4b5c
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2579e0d3
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7386025d
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@46aadd03
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7219f921
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@188cf0c9
+17-07-11 08:46:13 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5bdb9d6f
+17-07-11 08:46:13 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 7283 (auto-detected)
+17-07-11 08:46:13 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-11 08:46:13 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-11 08:46:13 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-11 08:46:13 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-11 08:46:13 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-11 08:46:13 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0xf575fcc409134668
+17-07-11 08:46:13 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-11 08:46:13 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-11 08:46:13 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-11 08:46:13 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-11 08:46:13 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-11 08:46:13 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-11 08:46:13 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-11 08:46:13 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-11 08:46:13 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-11 08:46:13 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-11 08:46:13 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-11 08:46:13 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-11 08:46:13 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-11 08:46:13 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-11 08:46:13 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-11 08:46:13 INFO  MySQLConnUtils:26 - jdbc:mysql://demomap.ddns.net:3306/ffserverdb?autoReconnect=true
+17-07-11 08:46:18 ERROR MySQLConnUtils:29 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-11 08:46:18 ERROR MySQLConnUtils:30 - SQLState: 08001
+17-07-11 08:46:18 ERROR MySQLConnUtils:31 - VendorError: 0
+17-07-14 12:27:28 INFO  FFServer:154 - ff_server module started
+17-07-14 12:27:28 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-14 12:27:28 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-14 12:27:28 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-14 12:27:28 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-14 12:27:28 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-14 12:27:28 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-14 12:27:28 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-14 12:27:28 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-14 12:27:28 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-14 12:27:28 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-14 12:27:28 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-14 12:27:28 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-14 12:27:28 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-14 12:27:28 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-14 12:27:28 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-14 12:27:28 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-14 12:27:28 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-14 12:27:28 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-14 12:27:28 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-14 12:27:28 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-14 12:27:28 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-14 12:27:29 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-14 12:27:29 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-14 12:27:29 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2b779b8c
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1426e0a5
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2db0f27b
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5fabf642
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4897adc0
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6b975fbf
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@419e4b9c
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4187ac0b
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@239341fd
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@382188d
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@f1d0da9
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3c59cbce
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@57cf911
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1629df43
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@71bef86a
+17-07-14 12:27:29 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@34b4a28
+17-07-14 12:27:29 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 3062 (auto-detected)
+17-07-14 12:27:29 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-14 12:27:29 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-14 12:27:29 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-14 12:27:29 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-14 12:27:29 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-14 12:27:29 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x40e06ec782739ad7
+17-07-14 12:27:29 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-14 12:27:29 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-14 12:27:29 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-14 12:27:29 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-14 12:27:29 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-14 12:27:29 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-14 12:27:29 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-14 12:27:29 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-14 12:27:29 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-14 12:27:29 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-14 12:27:29 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-14 12:27:29 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-14 12:27:29 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-14 12:27:29 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-14 12:27:29 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-14 12:27:29 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/ffserverdb?autoReconnect=true
+17-07-14 12:27:33 ERROR MySQLConnUtils:29 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-14 12:27:33 ERROR MySQLConnUtils:30 - SQLState: 08001
+17-07-14 12:27:33 ERROR MySQLConnUtils:31 - VendorError: 0
+17-07-14 12:41:20 INFO  FFServer:154 - ff_server module started
+17-07-14 12:41:20 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-14 12:41:20 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-14 12:41:20 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-14 12:41:20 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-14 12:41:20 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-14 12:41:20 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-14 12:41:20 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-14 12:41:20 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-14 12:41:20 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-14 12:41:20 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-14 12:41:20 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-14 12:41:20 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-14 12:41:20 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-14 12:41:20 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-14 12:41:20 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-14 12:41:20 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-14 12:41:20 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-14 12:41:20 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-14 12:41:20 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-14 12:41:20 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-14 12:41:20 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-14 12:41:20 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-14 12:41:20 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-14 12:41:20 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@20abd2a2
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6f5e117
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@266f9a5b
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@30383f6f
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4e78c508
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@672c6889
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3d4b8b75
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4c7908f4
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1c51302d
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@343035eb
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5c6b46d1
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e91d01b
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@b544bbc
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3e7ea850
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@38253c80
+17-07-14 12:41:20 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@28242297
+17-07-14 12:41:20 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 3784 (auto-detected)
+17-07-14 12:41:20 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-14 12:41:20 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-14 12:41:20 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-14 12:41:20 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-14 12:41:20 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-14 12:41:20 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x9a57319a9119851d
+17-07-14 12:41:20 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-14 12:41:20 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-14 12:41:20 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-14 12:41:20 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-14 12:41:20 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-14 12:41:20 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-14 12:41:20 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-14 12:41:20 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-14 12:41:20 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-14 12:41:20 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-14 12:41:20 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-14 12:41:20 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-14 12:41:20 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-14 12:41:20 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-14 12:41:20 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-14 12:41:20 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/ffserverdb?autoReconnect=true
+17-07-14 12:41:24 ERROR MySQLConnUtils:30 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-14 12:41:24 ERROR MySQLConnUtils:31 - SQLState: 08001
+17-07-14 12:41:24 ERROR MySQLConnUtils:32 - VendorError: 0
+17-07-14 12:45:35 INFO  FFServer:154 - ff_server module started
+17-07-14 12:45:35 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-14 12:45:36 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-14 12:45:36 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-14 12:45:36 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-14 12:45:36 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-14 12:45:36 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-14 12:45:36 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-14 12:45:36 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-14 12:45:36 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-14 12:45:36 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-14 12:45:36 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-14 12:45:36 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-14 12:45:36 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-14 12:45:36 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-14 12:45:36 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-14 12:45:36 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-14 12:45:36 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-14 12:45:36 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-14 12:45:36 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-14 12:45:36 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-14 12:45:36 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-14 12:45:36 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-14 12:45:36 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-14 12:45:36 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@20abd2a2
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6f5e117
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@266f9a5b
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@30383f6f
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4e78c508
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@672c6889
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3d4b8b75
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4c7908f4
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1c51302d
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@343035eb
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5c6b46d1
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e91d01b
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@b544bbc
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3e7ea850
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@38253c80
+17-07-14 12:45:36 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@28242297
+17-07-14 12:45:36 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 4017 (auto-detected)
+17-07-14 12:45:36 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-14 12:45:36 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-14 12:45:36 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-14 12:45:36 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-14 12:45:36 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-14 12:45:36 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0xe94abcee1f14ada9
+17-07-14 12:45:36 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-14 12:45:36 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-14 12:45:36 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-14 12:45:36 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-14 12:45:36 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-14 12:45:36 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-14 12:45:36 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-14 12:45:36 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-14 12:45:36 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-14 12:45:36 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-14 12:45:36 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-14 12:45:36 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-14 12:45:36 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-14 12:45:36 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-14 12:45:36 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-14 12:45:36 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/ffserverdb?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device03' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device04' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device01' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device07' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device08' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device09' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device10' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device11' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device12' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device13' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device14' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device15' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device06' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'device16' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str '74736575' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str '74730000' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str '00001A1A' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str '123' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str '00055555' to reg_lst
+17-07-14 12:45:36 DEBUG FFServer:164 - add reg_str 'sdfsdf' to reg_lst
+17-07-14 12:46:08 INFO  FFServer:154 - ff_server module started
+17-07-14 12:46:08 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-14 12:46:08 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-14 12:46:08 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-14 12:46:08 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-14 12:46:08 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-14 12:46:08 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-14 12:46:08 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-14 12:46:08 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-14 12:46:08 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-14 12:46:08 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-14 12:46:08 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-14 12:46:08 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-14 12:46:08 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-14 12:46:08 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-14 12:46:08 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-14 12:46:08 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-14 12:46:08 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-14 12:46:08 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-14 12:46:08 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-14 12:46:08 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-14 12:46:08 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-14 12:46:08 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-14 12:46:08 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-14 12:46:08 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2b779b8c
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1426e0a5
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2db0f27b
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5fabf642
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4897adc0
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6b975fbf
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@419e4b9c
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4187ac0b
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@239341fd
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@382188d
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@f1d0da9
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3c59cbce
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@57cf911
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1629df43
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@71bef86a
+17-07-14 12:46:08 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@34b4a28
+17-07-14 12:46:08 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 4078 (auto-detected)
+17-07-14 12:46:09 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-14 12:46:09 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-14 12:46:09 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-14 12:46:09 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-14 12:46:09 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-14 12:46:09 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x31849063997f381e
+17-07-14 12:46:09 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-14 12:46:09 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-14 12:46:09 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-14 12:46:09 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-14 12:46:09 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-14 12:46:09 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-14 12:46:09 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-14 12:46:09 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-14 12:46:09 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-14 12:46:09 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-14 12:46:09 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-14 12:46:09 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-14 12:46:09 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-14 12:46:09 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-14 12:46:09 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-14 12:46:09 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/ffserverdb?autoReconnect=true&serverTimezone=UTC
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device03' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device04' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device01' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device07' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device08' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device09' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device10' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device11' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device12' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device13' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device14' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device15' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device06' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'device16' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str '74736575' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str '74730000' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str '00001A1A' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str '123' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str '00055555' to reg_lst
+17-07-14 12:46:09 DEBUG FFServer:164 - add reg_str 'sdfsdf' to reg_lst
+17-07-14 12:46:27 INFO  FFServer:154 - ff_server module started
+17-07-14 12:46:27 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-14 12:46:27 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-14 12:46:27 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-14 12:46:27 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-14 12:46:27 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-14 12:46:27 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-14 12:46:27 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-14 12:46:27 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-14 12:46:27 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-14 12:46:27 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-14 12:46:27 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-14 12:46:27 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-14 12:46:27 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-14 12:46:27 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-14 12:46:27 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-14 12:46:27 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-14 12:46:27 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-14 12:46:27 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-14 12:46:27 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-14 12:46:27 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-14 12:46:27 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-14 12:46:27 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-14 12:46:27 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-14 12:46:27 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@20abd2a2
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6f5e117
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@266f9a5b
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@30383f6f
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4e78c508
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@672c6889
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3d4b8b75
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4c7908f4
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1c51302d
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@343035eb
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5c6b46d1
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e91d01b
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@b544bbc
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3e7ea850
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@38253c80
+17-07-14 12:46:27 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@28242297
+17-07-14 12:46:27 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 4128 (auto-detected)
+17-07-14 12:46:27 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-14 12:46:27 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-14 12:46:27 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-14 12:46:27 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-14 12:46:27 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-14 12:46:27 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x9dd9da521c98146b
+17-07-14 12:46:27 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-14 12:46:27 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-14 12:46:27 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-14 12:46:27 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-14 12:46:27 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-14 12:46:27 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-14 12:46:27 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-14 12:46:27 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-14 12:46:27 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-14 12:46:27 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-14 12:46:27 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-14 12:46:27 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-14 12:46:27 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-14 12:46:27 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-14 12:46:27 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-14 12:46:27 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/ffserverdb?autoReconnect=true
+17-07-14 12:46:32 ERROR MySQLConnUtils:30 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-14 12:46:32 ERROR MySQLConnUtils:31 - SQLState: 08001
+17-07-14 12:46:32 ERROR MySQLConnUtils:32 - VendorError: 0
+17-07-14 12:46:42 INFO  FFServer:154 - ff_server module started
+17-07-14 12:46:42 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-14 12:46:42 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-14 12:46:42 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-14 12:46:42 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-14 12:46:42 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-14 12:46:42 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-14 12:46:42 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-14 12:46:42 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-14 12:46:42 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-14 12:46:42 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-14 12:46:42 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-14 12:46:42 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-14 12:46:42 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-14 12:46:42 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-14 12:46:42 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-14 12:46:42 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-14 12:46:42 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-14 12:46:42 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-14 12:46:42 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-14 12:46:42 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-14 12:46:42 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-14 12:46:43 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-14 12:46:43 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-14 12:46:43 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@20abd2a2
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6f5e117
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@266f9a5b
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@30383f6f
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4e78c508
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@672c6889
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3d4b8b75
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4c7908f4
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1c51302d
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@343035eb
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5c6b46d1
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e91d01b
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@b544bbc
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3e7ea850
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@38253c80
+17-07-14 12:46:43 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@28242297
+17-07-14 12:46:43 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 4183 (auto-detected)
+17-07-14 12:46:43 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-14 12:46:43 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-14 12:46:43 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-14 12:46:43 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-14 12:46:43 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-14 12:46:43 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0xf519918c8fe942c0
+17-07-14 12:46:43 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-14 12:46:43 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-14 12:46:43 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-14 12:46:43 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-14 12:46:43 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-14 12:46:43 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-14 12:46:43 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-14 12:46:43 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-14 12:46:43 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-14 12:46:43 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-14 12:46:43 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-14 12:46:43 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-14 12:46:43 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-14 12:46:43 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-14 12:46:43 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-14 12:46:43 INFO  MySQLConnUtils:26 - jdbc:mysql://localhost:3306/ffserverdb?autoReconnect=true
+17-07-14 12:46:47 ERROR MySQLConnUtils:30 - SQLException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+17-07-14 12:46:47 ERROR MySQLConnUtils:31 - SQLState: 08001
+17-07-14 12:46:47 ERROR MySQLConnUtils:32 - VendorError: 0
+17-07-14 12:49:57 INFO  FFServer:154 - ff_server module started
+17-07-14 12:49:57 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-14 12:49:57 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-14 12:49:57 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-14 12:49:57 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-14 12:49:57 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-14 12:49:57 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-14 12:49:57 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-14 12:49:57 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-14 12:49:57 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-14 12:49:57 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-14 12:49:57 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-14 12:49:57 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-14 12:49:57 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-14 12:49:57 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-14 12:49:57 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-14 12:49:57 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-14 12:49:57 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-14 12:49:57 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-14 12:49:57 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-14 12:49:57 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-14 12:49:57 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-14 12:49:57 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-14 12:49:57 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-14 12:49:57 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2b779b8c
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1426e0a5
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2db0f27b
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5fabf642
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4897adc0
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6b975fbf
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@419e4b9c
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4187ac0b
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@239341fd
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@382188d
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@f1d0da9
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3c59cbce
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@57cf911
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1629df43
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@71bef86a
+17-07-14 12:49:57 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@34b4a28
+17-07-14 12:49:57 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 4266 (auto-detected)
+17-07-14 12:49:57 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-14 12:49:57 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-14 12:49:57 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-14 12:49:57 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-14 12:49:57 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-14 12:49:57 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x279ef8cad535b056
+17-07-14 12:49:57 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-14 12:49:57 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-14 12:49:57 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-14 12:49:57 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-14 12:49:57 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-14 12:49:57 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-14 12:49:57 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-14 12:49:57 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-14 12:49:57 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-14 12:49:57 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-14 12:49:57 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-14 12:49:57 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-14 12:49:57 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-14 12:49:57 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-14 12:49:57 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-14 12:49:57 INFO  MySQLConnUtils:26 - jdbc:mysql://demomap.ddns.net:3306/ffserverdb?autoReconnect=true&serverTimezone=UTC
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device03' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device04' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device01' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device07' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device08' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device09' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device10' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device11' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device12' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device13' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device14' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device15' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device06' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'device16' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str '74736575' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str '74730000' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str '00001A1A' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str '123' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str '00055555' to reg_lst
+17-07-14 12:50:00 DEBUG FFServer:164 - add reg_str 'sdfsdf' to reg_lst
+17-07-14 13:26:23 INFO  FFServer:154 - ff_server module started
+17-07-14 13:26:23 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-14 13:26:23 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-14 13:26:23 INFO  FFHttpServer:39 - ff_http_server module started
+17-07-14 13:26:23 INFO  MainApplication:39 - Wait For Termination Request...
+17-07-14 13:26:23 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-14 13:26:23 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-14 13:26:23 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-14 13:26:23 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-14 13:26:23 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-14 13:26:23 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-14 13:26:23 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-14 13:26:23 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-14 13:26:23 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-14 13:26:23 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-14 13:26:23 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-14 13:26:23 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-14 13:26:23 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-14 13:26:23 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-14 13:26:23 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-14 13:26:23 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-14 13:26:23 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-14 13:26:23 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-14 13:26:23 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-14 13:26:23 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@26300592
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1c11ecbd
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@40b890bc
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2a940b74
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@cae8721
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1f49f60d
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1bf0a828
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@11b5cf89
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@664cd6b9
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@132b185b
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@dad3670
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@71b080d3
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@71496942
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3a6b4ef0
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5e91f17b
+17-07-14 13:26:23 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2bd25462
+17-07-14 13:26:23 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 4713 (auto-detected)
+17-07-14 13:26:23 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-14 13:26:23 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-14 13:26:23 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-14 13:26:23 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-14 13:26:23 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-14 13:26:23 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0xf6f4c882d9c9a47f
+17-07-14 13:26:23 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-14 13:26:23 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-14 13:26:23 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-14 13:26:23 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-14 13:26:23 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-14 13:26:23 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-14 13:26:23 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-14 13:26:23 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-14 13:26:23 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-14 13:26:23 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-14 13:26:23 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-14 13:26:23 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-14 13:26:23 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-14 13:26:23 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-14 13:26:23 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-14 13:26:23 INFO  MySQLConnUtils:26 - jdbc:mysql://demomap.ddns.net:3306/ffserverdb?autoReconnect=true&serverTimezone=UTC
+17-07-14 13:26:25 DEBUG FFServer:164 - add reg_str 'device03' to reg_lst
+17-07-14 13:26:25 DEBUG FFServer:164 - add reg_str 'device04' to reg_lst
+17-07-14 13:26:25 DEBUG FFServer:164 - add reg_str 'device01' to reg_lst
+17-07-14 13:26:25 DEBUG FFServer:164 - add reg_str 'device07' to reg_lst
+17-07-14 13:26:25 DEBUG FFServer:164 - add reg_str 'device08' to reg_lst
+17-07-14 13:26:25 DEBUG FFServer:164 - add reg_str 'device09' to reg_lst
+17-07-14 13:26:25 DEBUG FFServer:164 - add reg_str 'device10' to reg_lst
+17-07-14 13:26:25 DEBUG FFServer:164 - add reg_str 'device11' to reg_lst
+17-07-14 13:26:25 DEBUG FFServer:164 - add reg_str 'device12' to reg_lst
+17-07-14 13:26:25 DEBUG FFServer:164 - add reg_str 'device13' to reg_lst
+17-07-14 13:26:25 DEBUG FFServer:164 - add reg_str 'device14' to reg_lst
+17-07-14 13:26:26 DEBUG FFServer:164 - add reg_str 'device15' to reg_lst
+17-07-14 13:26:26 DEBUG FFServer:164 - add reg_str 'device06' to reg_lst
+17-07-14 13:26:26 DEBUG FFServer:164 - add reg_str 'device16' to reg_lst
+17-07-14 13:26:26 DEBUG FFServer:164 - add reg_str '74736575' to reg_lst
+17-07-14 13:26:26 DEBUG FFServer:164 - add reg_str '74730000' to reg_lst
+17-07-14 13:26:26 DEBUG FFServer:164 - add reg_str '00001A1A' to reg_lst
+17-07-14 13:26:26 DEBUG FFServer:164 - add reg_str '123' to reg_lst
+17-07-14 13:26:26 DEBUG FFServer:164 - add reg_str '00055555' to reg_lst
+17-07-14 13:26:26 DEBUG FFServer:164 - add reg_str 'sdfsdf' to reg_lst
+17-07-14 13:26:53 INFO  FFServer:154 - ff_server module started
+17-07-14 13:26:53 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-14 13:26:53 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-14 13:26:53 INFO  FFHttpServer:39 - ff_http_server module started
+17-07-14 13:26:53 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-14 13:26:53 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-14 13:26:53 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-14 13:26:53 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-14 13:26:53 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-14 13:26:53 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-14 13:26:53 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-14 13:26:53 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-14 13:26:53 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-14 13:26:53 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-14 13:26:53 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-14 13:26:53 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-14 13:26:53 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-14 13:26:53 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-14 13:26:53 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-14 13:26:53 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-14 13:26:53 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-14 13:26:53 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-14 13:26:53 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-14 13:26:53 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5edbe555
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@34d35083
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5f3d0c88
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@53917416
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@52e1d27c
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7c98c7eb
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4b76ddbc
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@131f3100
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@38bce45c
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3d513ec1
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@228babe5
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5a7f8933
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@53e0824
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@31ad9974
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4e06c827
+17-07-14 13:26:53 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6816e6c5
+17-07-14 13:26:53 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 4772 (auto-detected)
+17-07-14 13:26:53 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-14 13:26:53 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-14 13:26:53 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-14 13:26:53 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-14 13:26:53 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-14 13:26:53 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0xe2ab1b855d395ba2
+17-07-14 13:26:53 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-14 13:26:53 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-14 13:26:53 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-14 13:26:53 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-14 13:26:53 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-14 13:26:53 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-14 13:26:53 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-14 13:26:53 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-14 13:26:53 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-14 13:26:53 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-14 13:26:53 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-14 13:26:53 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-14 13:26:53 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-14 13:26:53 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-14 13:26:53 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-14 13:26:54 INFO  MySQLConnUtils:26 - jdbc:mysql://demomap.ddns.net:3306/ffserverdb?autoReconnect=true&serverTimezone=UTC
+17-07-14 13:26:56 DEBUG FFServer:164 - add reg_str 'device03' to reg_lst
+17-07-14 13:26:56 DEBUG FFServer:164 - add reg_str 'device04' to reg_lst
+17-07-14 13:26:56 DEBUG FFServer:164 - add reg_str 'device01' to reg_lst
+17-07-14 13:26:56 DEBUG FFServer:164 - add reg_str 'device07' to reg_lst
+17-07-14 13:26:56 DEBUG FFServer:164 - add reg_str 'device08' to reg_lst
+17-07-14 13:26:56 DEBUG FFServer:164 - add reg_str 'device09' to reg_lst
+17-07-14 13:26:56 DEBUG FFServer:164 - add reg_str 'device10' to reg_lst
+17-07-14 13:26:57 DEBUG FFServer:164 - add reg_str 'device11' to reg_lst
+17-07-14 13:26:57 DEBUG FFServer:164 - add reg_str 'device12' to reg_lst
+17-07-14 13:26:57 DEBUG FFServer:164 - add reg_str 'device13' to reg_lst
+17-07-14 13:26:57 DEBUG FFServer:164 - add reg_str 'device14' to reg_lst
+17-07-14 13:26:57 DEBUG FFServer:164 - add reg_str 'device15' to reg_lst
+17-07-14 13:26:57 DEBUG FFServer:164 - add reg_str 'device06' to reg_lst
+17-07-14 13:26:57 DEBUG FFServer:164 - add reg_str 'device16' to reg_lst
+17-07-14 13:26:57 DEBUG FFServer:164 - add reg_str '74736575' to reg_lst
+17-07-14 13:26:57 DEBUG FFServer:164 - add reg_str '74730000' to reg_lst
+17-07-14 13:26:57 DEBUG FFServer:164 - add reg_str '00001A1A' to reg_lst
+17-07-14 13:26:57 DEBUG FFServer:164 - add reg_str '123' to reg_lst
+17-07-14 13:26:57 DEBUG FFServer:164 - add reg_str '00055555' to reg_lst
+17-07-14 13:26:57 DEBUG FFServer:164 - add reg_str 'sdfsdf' to reg_lst
+17-07-14 13:27:00 INFO  MainApplication:39 - Wait For Termination Request...
+17-07-14 13:32:56 INFO  FFServer:154 - ff_server module started
+17-07-14 13:32:56 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-14 13:32:56 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-14 13:32:56 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-14 13:32:56 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-14 13:32:56 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-14 13:32:56 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-14 13:32:56 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-14 13:32:56 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-14 13:32:56 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-14 13:32:56 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-14 13:32:56 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-14 13:32:56 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-14 13:32:56 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-14 13:32:56 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-14 13:32:56 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-14 13:32:56 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-14 13:32:56 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-14 13:32:56 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-14 13:32:56 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-14 13:32:56 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-14 13:32:56 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-14 13:32:56 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-14 13:32:56 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-14 13:32:56 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@20abd2a2
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6f5e117
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@266f9a5b
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@30383f6f
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4e78c508
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@672c6889
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3d4b8b75
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4c7908f4
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1c51302d
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@343035eb
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5c6b46d1
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1e91d01b
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@b544bbc
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3e7ea850
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@38253c80
+17-07-14 13:32:56 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@28242297
+17-07-14 13:32:56 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 4881 (auto-detected)
+17-07-14 13:32:56 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-14 13:32:56 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-14 13:32:56 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-14 13:32:56 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-14 13:32:56 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-14 13:32:56 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0x44929c9ec4cca403
+17-07-14 13:32:56 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-14 13:32:56 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-14 13:32:56 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-14 13:32:56 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-14 13:32:56 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-14 13:32:56 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-14 13:32:56 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-14 13:32:56 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-14 13:32:56 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-14 13:32:56 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-14 13:32:56 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-14 13:32:56 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-14 13:32:56 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-14 13:32:56 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-14 13:32:56 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-14 13:32:56 INFO  MySQLConnUtils:26 - jdbc:mysql://demomap.ddns.net:3306/ffserverdb?autoReconnect=true&serverTimezone=UTC
+17-07-14 13:32:58 DEBUG FFServer:164 - add reg_str 'device03' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'device04' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'device01' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'device07' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'device08' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'device09' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'device10' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'device11' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'device12' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'device13' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'device14' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'device15' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'device06' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'device16' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str '74736575' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str '74730000' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str '00001A1A' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str '123' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str '00055555' to reg_lst
+17-07-14 13:32:59 DEBUG FFServer:164 - add reg_str 'sdfsdf' to reg_lst
+17-07-14 14:20:59 INFO  FFServer:154 - ff_server module started
+17-07-14 14:20:59 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-14 14:20:59 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-14 14:20:59 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-14 14:20:59 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-14 14:20:59 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-14 14:20:59 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-14 14:20:59 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-14 14:20:59 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-14 14:20:59 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-14 14:20:59 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-14 14:20:59 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-14 14:20:59 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-14 14:20:59 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-14 14:20:59 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-14 14:20:59 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-14 14:20:59 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-14 14:20:59 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-14 14:20:59 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-14 14:20:59 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-14 14:20:59 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-14 14:20:59 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-14 14:20:59 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-14 14:20:59 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-14 14:20:59 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@54b88b60
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@44a62056
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1523018a
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7cf5fb6b
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6c068c1e
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1957a558
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@14f5d8a9
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@478847ff
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2579e0d3
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7386025d
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@46aadd03
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@7219f921
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@188cf0c9
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5bdb9d6f
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4b8911d2
+17-07-14 14:20:59 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@76e43973
+17-07-14 14:20:59 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 4258 (auto-detected)
+17-07-14 14:20:59 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-14 14:20:59 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-14 14:20:59 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-14 14:20:59 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-14 14:20:59 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-14 14:20:59 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0xc7e35a5968d35330
+17-07-14 14:20:59 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-14 14:20:59 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-14 14:21:00 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-14 14:21:00 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-14 14:21:00 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-14 14:21:00 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-14 14:21:00 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-14 14:21:00 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-14 14:21:00 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-14 14:21:00 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-14 14:21:00 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-14 14:21:00 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-14 14:21:00 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-14 14:21:00 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-14 14:21:00 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-14 14:21:00 INFO  MySQLConnUtils:26 - jdbc:mysql://demomap.ddns.net:3306/ffserverdb?autoReconnect=true&serverTimezone=UTC
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device03' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device04' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device01' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device07' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device08' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device09' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device10' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device11' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device12' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device13' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device14' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device15' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device06' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'device16' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str '74736575' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str '74730000' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str '00001A1A' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str '123' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str '00055555' to reg_lst
+17-07-14 14:21:02 DEBUG FFServer:164 - add reg_str 'sdfsdf' to reg_lst
+17-07-14 14:25:04 INFO  FFServer:154 - ff_server module started
+17-07-14 14:25:04 DEBUG InternalLoggerFactory:59 - Using Log4J as the default logging framework
+17-07-14 14:25:04 DEBUG MultithreadEventLoopGroup:43 - -Dio.netty.eventLoopThreads: 8
+17-07-14 14:25:04 DEBUG PlatformDependent0:87 - java.nio.Buffer.address: available
+17-07-14 14:25:04 INFO  FFHttpServer:37 - ff_http_server module started
+17-07-14 14:25:04 INFO  MainApplication:37 - Wait For Termination Request...
+17-07-14 14:25:04 DEBUG PlatformDependent0:123 - sun.misc.Unsafe.theUnsafe: available
+17-07-14 14:25:04 DEBUG PlatformDependent0:147 - sun.misc.Unsafe.copyMemory: available
+17-07-14 14:25:04 DEBUG PlatformDependent0:194 - direct buffer constructor: available
+17-07-14 14:25:04 DEBUG PlatformDependent0:243 - java.nio.Bits.unaligned: available, true
+17-07-14 14:25:04 DEBUG PlatformDependent0:255 - java.nio.DirectByteBuffer.<init>(long, int): available
+17-07-14 14:25:04 DEBUG Cleaner0:67 - java.nio.ByteBuffer.cleaner(): available
+17-07-14 14:25:04 DEBUG PlatformDependent:1079 - Java version: 8
+17-07-14 14:25:04 DEBUG PlatformDependent:1116 - -Dio.netty.noUnsafe: false
+17-07-14 14:25:04 DEBUG PlatformDependent:1151 - sun.misc.Unsafe: available
+17-07-14 14:25:04 DEBUG PlatformDependent:1226 - -Dio.netty.noJavassist: false
+17-07-14 14:25:04 DEBUG PlatformDependent:1239 - Javassist: unavailable
+17-07-14 14:25:04 DEBUG PlatformDependent:1240 - You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+17-07-14 14:25:04 DEBUG PlatformDependent:1258 - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17-07-14 14:25:04 DEBUG PlatformDependent:1337 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17-07-14 14:25:04 DEBUG PlatformDependent:118 - -Dio.netty.noPreferDirect: false
+17-07-14 14:25:04 DEBUG PlatformDependent:154 - io.netty.maxDirectMemory: 697303040 bytes
+17-07-14 14:25:04 DEBUG NioEventLoop:111 - -Dio.netty.noKeySetOptimization: false
+17-07-14 14:25:04 DEBUG NioEventLoop:112 - -Dio.netty.selectorAutoRebuildThreshold: 512
+17-07-14 14:25:04 DEBUG PlatformDependent:870 - org.jctools-core.MpscChunkedArrayQueue: available
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1426e0a5
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@2db0f27b
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@5fabf642
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4897adc0
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@6b975fbf
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@419e4b9c
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@4187ac0b
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@340be056
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@382188d
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@f1d0da9
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@3c59cbce
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@57cf911
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@1629df43
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@71bef86a
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@34b4a28
+17-07-14 14:25:04 TRACE NioEventLoop:230 - instrumented a special java.util.Set into: sun.nio.ch.EPollSelectorImpl@619d9f21
+17-07-14 14:25:04 DEBUG DefaultChannelId:86 - -Dio.netty.processId: 4490 (auto-detected)
+17-07-14 14:25:04 DEBUG NetUtil:135 - -Djava.net.preferIPv4Stack: false
+17-07-14 14:25:04 DEBUG NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+17-07-14 14:25:04 DEBUG NetUtil:217 - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+17-07-14 14:25:04 DEBUG NetUtil:264 - /proc/sys/net/core/somaxconn: 128
+17-07-14 14:25:04 DEBUG DefaultChannelId:106 - -Dio.netty.machineId: 00:0c:29:ff:fe:51:90:b0 (auto-detected)
+17-07-14 14:25:04 DEBUG ThreadLocalRandom:226 - -Dio.netty.initialSeedUniquifier: 0xbcc645c950329938
+17-07-14 14:25:04 DEBUG ResourceLeakDetector:106 - -Dio.netty.leakDetection.level: simple
+17-07-14 14:25:04 DEBUG ResourceLeakDetector:107 - -Dio.netty.leakDetection.maxRecords: 4
+17-07-14 14:25:04 DEBUG PooledByteBufAllocator:107 - -Dio.netty.allocator.numHeapArenas: 6
+17-07-14 14:25:04 DEBUG PooledByteBufAllocator:108 - -Dio.netty.allocator.numDirectArenas: 6
+17-07-14 14:25:04 DEBUG PooledByteBufAllocator:110 - -Dio.netty.allocator.pageSize: 8192
+17-07-14 14:25:04 DEBUG PooledByteBufAllocator:115 - -Dio.netty.allocator.maxOrder: 11
+17-07-14 14:25:04 DEBUG PooledByteBufAllocator:119 - -Dio.netty.allocator.chunkSize: 16777216
+17-07-14 14:25:04 DEBUG PooledByteBufAllocator:120 - -Dio.netty.allocator.tinyCacheSize: 512
+17-07-14 14:25:04 DEBUG PooledByteBufAllocator:121 - -Dio.netty.allocator.smallCacheSize: 256
+17-07-14 14:25:04 DEBUG PooledByteBufAllocator:122 - -Dio.netty.allocator.normalCacheSize: 64
+17-07-14 14:25:04 DEBUG PooledByteBufAllocator:123 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17-07-14 14:25:04 DEBUG PooledByteBufAllocator:124 - -Dio.netty.allocator.cacheTrimInterval: 8192
+17-07-14 14:25:04 DEBUG ByteBufUtil:80 - -Dio.netty.allocator.type: pooled
+17-07-14 14:25:04 DEBUG ByteBufUtil:89 - -Dio.netty.threadLocalDirectBufferSize: 65536
+17-07-14 14:25:04 DEBUG ByteBufUtil:92 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17-07-14 14:25:04 INFO  MySQLConnUtils:26 - jdbc:mysql://demomap.ddns.net:3306/ffserverdb?autoReconnect=true&serverTimezone=UTC
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device03' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device04' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device01' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device07' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device08' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device09' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device10' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device11' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device12' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device13' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device14' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device15' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device06' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'device16' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str '74736575' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str '74730000' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str '00001A1A' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str '123' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str '00055555' to reg_lst
+17-07-14 14:25:09 DEBUG FFServer:164 - add reg_str 'sdfsdf' to reg_lst

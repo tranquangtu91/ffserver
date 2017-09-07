@@ -9,7 +9,7 @@ import org.apache.log4j.PropertyConfigurator;
 
 import com.sun.net.httpserver.HttpServer;
 
-public class FFHttpServer{
+public class FFHttpServer {
 
     public static Logger logger = Logger.getLogger(FFHttpServer.class.getName());
 
@@ -36,7 +36,7 @@ public class FFHttpServer{
         server.start();
         logger.info("ff_http_server module started");
     }
-    
+
     public void Stop() {
         server.stop(1);
     }
